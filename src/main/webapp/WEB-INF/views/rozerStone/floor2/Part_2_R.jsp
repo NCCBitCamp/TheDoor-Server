@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@
             align-items: flex-end;
             height: 100vh; /* 화면 전체 높이로 설정 */
             margin: 0;
-            background-image: url("Part_2_bg.png");
+            background-image: url("/static/images/rozer/integ/Part_2_bg.png");
             background-size: cover; /* 이미지를 화면에 꽉 차게 설정 */
             background-position: center; /* 이미지를 화면 중앙에 위치 */
             background-repeat: no-repeat; /* 이미지를 반복하지 않게 설정 */
@@ -57,14 +57,6 @@
             right: 53%;
             top: 31%;
         }
-        .key {
-            position: absolute;
-            z-index: 2;
-            width: 0.9vw;
-            height: 1.9vh;
-            right: 59.7%;
-            top: 52.8%;
-        }
         .seklHand5 {
             position: absolute;
             z-index: 1;
@@ -80,7 +72,7 @@
             width: 5vw;
             height: 11vh;
             right: 40%;
-            top: 31%;
+            top: 30%;
             rotate: 180deg;
         }
         .chess {
@@ -104,6 +96,22 @@
             cursor: pointer;
             border-radius: 5px;
         }
+        .red-overlay {
+            display: none; /* 초기에는 오버레이를 숨깁니다. */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: darkred;
+            opacity: 0;
+            z-index: 10; /* 오버레이가 텍스트 박스, 버튼 위에 표시 */
+            transition: opacity 300ms ease-out; /* 1초 동안 천천히 나타나게 설정 */
+        }
+        .fade-in-red {
+            display: block;
+            opacity: 0.8; /* 붉은 오버레이의 불투명도 */
+        }
     </style>
 </head>
 <body>
@@ -112,37 +120,26 @@
             <span class="text"></span>
         </div>
         <div>
-            <img src="Part_2_R_openmaiden2.png" class="middle bgimg">
-            <img src="image/뚜껑열린가시메이든.png" class="ironmaiden" onclick="clkironmaiden()">
-            <img src="image/가시6.png" class="key" onclick="clkironmaidenkey()">
-            <img src="image/해골5.png" class="seklHand5" onclick="getMessaggeSkel()">
-            <img src="image/해골4.png" class="seklLeg4" onclick="getMessaggeSkel()">
-            <img src="image/체스판.png" class="chess" onclick="clickChess()">
-            <img src="comment_area_bloody2.png" class="comment_area" onclick="redirectToNaver()">
+            <img src="/static/images/rozer/integ/Part_2_R.png" class="middle bgimg">
+            <img src="/static/images/rozer/integ/아이언메이든.png" class="ironmaiden" onclick="clkironmaiden()">
+            <img src="/static/images/rozer/integ/해골5.png" class="seklHand5" onclick="getMessaggeSkel()">
+            <img src="/static/images/rozer/integ/해골4.png" class="seklLeg4" onclick="getMessaggeSkel()">
+            <img src="/static/images/rozer/integ/체스판.png" class="chess" onclick="clickChess()">
+            <img src="/static/images/rozer/integ/comment_area_bloody2.png" class="comment_area" onclick="redirectToNaver()">
         </div>
         <a href="Part_2_C.html" class="carousel-control-prev" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </a>
-        <a href="Part_2_B.html" class="carousel-control-next" data-bs-slide="next">
+<%--        링크이동만들기--%>
+        <a href="Part_2_B.jsp" class="carousel-control-next" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
         </a>
         <button class="inventory_button" onclick="goToInventory()">인벤토리</button>
     </div>
     </span>
+    <div class="red-overlay" id="redOverlay"></div>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-        // HTML 문서가 완전히 로드되고 인벤에 로저크리스탈 있으면
-        // 화면에 가시 안보이기(못뽑음) 없으면 화면에 가시 보이기(뽑을지 선택지 줌)
-            const targetItem = "../integ/RozerCrystal.png";
-            let inventory = JSON.parse(localStorage.getItem('inventory')) || [];
-            if (inventory.includes(targetItem)) {
-                const key = document.querySelector(".key");
-                key.style.display="none";
-            }
-        });
-
-
-        const content = "어.. 갑자기 열린거같은데?..";
+        const content = "아이언 메이든 무섭다..";
         const text = document.querySelector(".text");
         let i = 0;
 
@@ -160,6 +157,8 @@
         // }
         
         function getItem(imageSrc) {
+            const audio = new Audio('/static/sounds/rozer/integ/아이템을획득.mp3');
+            audio.play();
             let inventory = JSON.parse(localStorage.getItem('inventory')) || [];
             if (inventory.length < 6) { // 인벤토리에 아이템이 6개 이하인 경우만 추가
                 inventory.push(imageSrc);
@@ -171,37 +170,27 @@
         }
 
         function clickChess() {
+            const audio = new Audio('/static/sounds/rozer/integ/딸깍2.mp3');
+            audio.play();
             window.location.href = "chess.html";
-        }
+        } // 링크이동만들기
 
         function getMessaggeSkel() {
-            const audio = new Audio('music/쇠사슬소리.mp3');
+            const audio = new Audio('/static/sounds/rozer/integ/쇠사슬소리.mp3');
             audio.play();
         }
 
+        const audio = new Audio('/static/sounds/rozer/integ/짧은성가대.mp3');
         function clkironmaiden() {
-            const die = confirm("체험 해 볼까?");
-            
-            if(die){
-                window.location.href = "../integ/Dead_stampede.html";
-            }
-            alert("아니다..그러지말자..");
+            audio.play();
+            alert('아이언메이든에서 왠지 시선이 느껴진다..');
+            const redOverlay = document.getElementById("redOverlay");
+            redOverlay.classList.add('fade-in-red');
+            setTimeout(() => {
+                window.location.href = "Part_2_R_openmaiden.html";
+            },200);
         }
-        
-        function clkironmaidenkey() {
-            const take = confirm("가시를 뽑아보겠습니까?")
-            
-            if(take){
-                const audio = new Audio('../integ/만능키소리.mp3');
-                audio.play();
-
-                const key = document.querySelector(".key");
-                key.style.display="none";
-                getItem("../integ/RozerCrystal.png");
-                alert("손에 구슬이 흘러들어왔다!");
-            }
-        }
-
+        // 링크이동만들기
         function goToInventory() {
             window.location.href = "../integ/Inventory_temp.html";
         }

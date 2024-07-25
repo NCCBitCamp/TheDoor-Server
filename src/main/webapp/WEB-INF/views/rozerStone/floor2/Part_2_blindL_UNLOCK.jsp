@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@
             align-items: flex-end;
             height: 100vh; /* 화면 전체 높이로 설정 */
             margin: 0;
-            background-image: url("Part_2_bg.png");
+            background-image: url("/static/images/rozer/integ/Part_2_bg.png");
             background-size: cover; /* 이미지를 화면에 꽉 차게 설정 */
             background-position: center; /* 이미지를 화면 중앙에 위치 */
             background-repeat: no-repeat; /* 이미지를 반복하지 않게 설정 */
@@ -103,10 +103,11 @@
                 <span class="text"></span>
             </div>
             <div class="overlay-container">
-                <img src="Part2_L_UNLOCK.png" class="middle bgimg">
-                <img src="image/square1.png" class="lock" onclick="switchclick()">
-                <img src="comment_area_bloody2.png" class="comment_area">
+                <img src="/static/images/rozer/integ/Part2_L_UNLOCK.png" class="middle bgimg">
+                <img src="/static/images/rozer/integ/square1.png" class="lock" onclick="switchclick()">
+                <img src="/static/images/rozer/integ/comment_area_bloody2.png" class="comment_area">
             </div>
+<%--            링크이동 만들기--%>
             <a href="Part_2_C_UNLOCK.html" class="carousel-control-next" data-bs-slide="next">
                 <span class="carousel-control-next-icon"></span>
             </a>
@@ -140,8 +141,8 @@
 
         function switchclick() {
             // Play the sound
-            const audio = new Audio('music/돌버튼2.mp3');
-            const audio2 = new Audio('music/문열기5.mp3'); 
+            const audio = new Audio('/static/sounds/rozer/integ/돌버튼2.mp3');
+            const audio2 = new Audio('/static/sounds/rozer/integ/문열기5.mp3');
             audio.play();
 
             // Show the next control after 1 second
@@ -153,7 +154,7 @@
 
         function goToInventory() {
             window.location.href = "../integ/Inventory_temp.html";
-        }
+        } // 링크이동만들기
     </script>
 </body>
 </html>

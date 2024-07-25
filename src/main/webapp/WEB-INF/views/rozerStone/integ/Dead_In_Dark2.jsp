@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -71,15 +71,16 @@
         <span class="text"></span>
     </div>
     <audio id="audio"></audio>
+<%--    링크이동만들기--%>
     <button class="redirect-button" onclick="location.href='the_door_main.html'">Go to Main Door</button>
-    <img src="image/귀신2.gif" class="scary-image" id="scaryImage">
+    <img src="/static/images/rozer/integ/귀신2.gif" class="scary-image" id="scaryImage">
     <div class="red-overlay" id="redOverlay"></div>
 
     <script>
         const content = [
-            { text: "   ", audio: "door-2.mp3" },
+            { text: "   ", audio: "/static/sounds/rozer/integ/door-2.mp3" },
             { text: "....?" },
-            { text: "소름돋는 여자는 내 눈을 파버린다.", audio: "성냥2.mp3" }
+            { text: "소름돋는 여자는 내 눈을 파버린다.", audio: "/static/sounds/rozer/integ/성냥2.mp3" }
         ];
         const textElement = document.querySelector(".text");
         const audioElement = document.getElementById("audio");

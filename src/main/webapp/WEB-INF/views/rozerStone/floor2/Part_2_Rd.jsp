@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <div class="time-left" style="color: brown;"></div>
-    <script src="sharedTimer.js"></script>
+    <script src="/static/js/rozer/sharedTimer.js"></script>
     <!-- <script type="module">
         import { sharedTimer } from './sharedTimer.js';
         console.log(sharedTimer.timeLeft);
@@ -84,13 +84,14 @@
             <span class="text"></span>
         </div>
         <div>
-            <img src="Part_2_R_Dark.png" class="middle bgimg">
-            <img src="image/양초dark.png" class="middle candle" onclick="getLight()">
-            <img src="comment_area_bloody.png" class="comment_area" onclick="redirectToNaver()">
+            <img src="/static/images/rozer/integ/Part_2_R_Dark.png" class="middle bgimg">
+            <img src="/static/images/rozer/integ/양초dark.png" class="middle candle" onclick="getLight()">
+            <img src="/static/images/rozer/integ/comment_area_bloody.png" class="comment_area" onclick="redirectToNaver()">
         </div>
         <a href="Part_2_Cd.jsp" class="carousel-control-prev" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </a>
+<%--        링크이동만들기--%>
         <a href="Part_2_Rd.html" class="carousel-control-next" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
         </a>
@@ -116,11 +117,11 @@
         // }
         
         function getLight(imageSrc) {
-            const audio = new Audio('../music/성냥2.mp3');
+            const audio = new Audio('/static/sounds/rozer/integ/성냥2.mp3');
             audio.play();
             window.location.href = "Part_2-Script2.html";
         }
-
+        // 링크이동만들기
         function goToInventory() {
             window.location.href = "../integ/Inventory_temp.html";
         }

@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,7 +51,7 @@
 <body>
     <div class="inventory">
         <!-- 인벤토리 이미지를 감싸는 div 요소 -->
-        <img src="inventory.png" class="inventoryImage">
+        <img src="/static/images/rozer/integ/inventory.png" class="inventoryImage">
         
         <!-- 아이템을 담을 박스 1 -->
         <div class="box" id="box1" style="left: 38%; top: 34%;"></div>
@@ -74,7 +74,7 @@
     
     <!-- 인벤토리에서 돌아가는 버튼 -->
     <div>
-        <img src="Inventory_back.png" class="back_button" onclick="getBack()">
+        <img src="/static/images/rozer/integ/Inventory_back.png" class="back_button" onclick="getBack()">
     </div>
     
     <script>

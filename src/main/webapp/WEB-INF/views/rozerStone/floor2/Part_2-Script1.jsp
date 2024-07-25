@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,7 +52,7 @@
         let i = 0;
 
         function typing(){
-            comment_area.src = "comment_area_bloody.png";
+            comment_area.src = "/static/images/rozer/integ/comment_area_bloody.png";
             if (i < content.length) {
                 let txt = content.charAt(i);
                 text.innerHTML += txt;
@@ -68,7 +68,7 @@
         setInterval(typing, 100);
 
         function redirectTo2_C() {
-            window.location.href = "Part_2_Cd.html";
+            window.location.href = "Part_2_Cd.html"; // 링크이동만들기
         }
     </script>
 </body>

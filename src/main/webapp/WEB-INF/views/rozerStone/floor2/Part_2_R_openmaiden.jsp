@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RozerStone</title>
+    <link rel="icon" href="../favicon-16x16.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <style>
@@ -14,7 +15,7 @@
             align-items: flex-end;
             height: 100vh; /* 화면 전체 높이로 설정 */
             margin: 0;
-            background-image: url("static/images/rozer/floor2/Part_2_bg.png");
+            background-image: url("/static/images/rozer/integ/Part_2_bg.png");
             background-size: cover; /* 이미지를 화면에 꽉 차게 설정 */
             background-position: center; /* 이미지를 화면 중앙에 위치 */
             background-repeat: no-repeat; /* 이미지를 반복하지 않게 설정 */
@@ -26,7 +27,6 @@
             z-index: 2; /* 텍스트를 이미지 위에 표시하기 위해 z-index 설정 */
             font-size: large;
             left: 38%;
-
         }
         .comment_area {
             position: absolute;
@@ -49,47 +49,47 @@
         img:hover{
             pointer-events: visiblePainted;
         }
-        .candle {
+        .ironmaiden {
+            position: absolute;
+            z-index: 1;
+            width: 10vw;
+            height: 30vh;
+            right: 53%;
+            top: 31%;
+        }
+        .key {
+            position: absolute;
+            z-index: 2;
+            width: 0.9vw;
+            height: 1.9vh;
+            right: 59.7%;
+            top: 52.8%;
+        }
+        .seklHand5 {
             position: absolute;
             z-index: 1;
             width: 2vw;
-            height: 6vh;
-            right: 46%;
-            top: 41%;
+            height: 9vh;
+            right: 44.4%;
+            top: 34%;
+            rotate: 180deg;
         }
-        .paper1 {
+        .seklLeg4 {
+            position: absolute;
             z-index: 2;
             width: 5vw;
-            height: 5vh;
-            right: 43%;
-            top: 48%;
-         }
-        .paper10 {
-            z-index: 2;
-            width: 4vw;
-            height: 3vh;
-            right: 55%;
-            top: 48%;
+            height: 11vh;
+            right: 40%;
+            top: 31%;
+            rotate: 180deg;
         }
-        .book1 {
-            z-index: 3;
-            width: 5vw;
-            height: 5vh;
-            right: 46%;
-            top: 45%;
-            rotate: -30deg;
-        }
-        .book23 {
-            z-index: 2;
-            width: 4vw;
-            height: 4vw;
-            right: 44%;
-            top: 44%;
-        }
-        .book3{
-            right: 54%;
-            height: 4vh;
-            top: 46%;
+        .chess {
+            position: absolute;
+            z-index: 1;
+            width: 11vw;
+            height: 14vh;
+            right: 36%;
+            top: 47%;
         }
         .inventory_button {
             position: absolute;
@@ -104,20 +104,6 @@
             cursor: pointer;
             border-radius: 5px;
         }
-        .square_L{
-            position: absolute;
-            bottom: 40%;
-            left: 33%;
-            width: 6%;
-            z-index: 2;
-        }
-        .square_R{
-            position: absolute;
-            bottom: 40%;
-            right: 33%;
-            width: 6%;
-            z-index: 2;
-        }
     </style>
 </head>
 <body>
@@ -126,22 +112,38 @@
             <span class="text"></span>
         </div>
         <div>
-            <img src="Part_2_B.png" class="middle bgimg">
-            <img src="static/images/rozer/floor2/square1.png" class="square_L" onclick="badskullending()">
-            <img src="static/images/rozer/floor2/square1.png" class="square_R" onclick="Story()">
-            <img src="comment_area_bloody2.png" class="comment_area" onclick="redirectToNaver()">
+            <img src="/static/images/rozer/integ/Part_2_R_openmaiden2.png" class="middle bgimg">
+            <img src="/static/images/rozer/integ/뚜껑열린가시메이든.png" class="ironmaiden" onclick="clkironmaiden()">
+            <img src="/static/images/rozer/integ/가시6.png" class="key" onclick="clkironmaidenkey()">
+            <img src="/static/images/rozer/integ/해골5.png" class="seklHand5" onclick="getMessaggeSkel()">
+            <img src="/static/images/rozer/integ/해골4.png" class="seklLeg4" onclick="getMessaggeSkel()">
+            <img src="/static/images/rozer/integ/체스판.png" class="chess" onclick="clickChess()">
+            <img src="/static/images/rozer/integ/comment_area_bloody2.png" class="comment_area" onclick="redirectToNaver()">
         </div>
-        <a href="Part_2_R.html" class="carousel-control-prev" data-bs-slide="prev">
+        <a href="Part_2_C.html" class="carousel-control-prev" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </a>
-        <a href="Part_2_L.html" class="carousel-control-next" data-bs-slide="next">
+<%--        링크이동만들기--%>
+        <a href="Part_2_B.jsp" class="carousel-control-next" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
         </a>
         <button class="inventory_button" onclick="goToInventory()">인벤토리</button>
     </div>
     </span>
     <script>
-        const content = "수많은 사람들이 죽어간 곳인 것 같다...";
+        document.addEventListener('DOMContentLoaded', function() {
+        // HTML 문서가 완전히 로드되고 인벤에 로저크리스탈 있으면
+        // 화면에 가시 안보이기(못뽑음) 없으면 화면에 가시 보이기(뽑을지 선택지 줌)
+            const targetItem = "/static/images/rozer/integ/RozerCrystal.png";
+            let inventory = JSON.parse(localStorage.getItem('inventory')) || [];
+            if (inventory.includes(targetItem)) {
+                const key = document.querySelector(".key");
+                key.style.display="none";
+            }
+        });
+
+
+        const content = "어.. 갑자기 열린거같은데?..";
         const text = document.querySelector(".text");
         let i = 0;
 
@@ -159,8 +161,6 @@
         // }
         
         function getItem(imageSrc) {
-            const audio = new Audio('../integ/아이템을획득.mp3');
-            audio.play();
             let inventory = JSON.parse(localStorage.getItem('inventory')) || [];
             if (inventory.length < 6) { // 인벤토리에 아이템이 6개 이하인 경우만 추가
                 inventory.push(imageSrc);
@@ -171,22 +171,41 @@
             }
         }
 
-        function badskullending(){
-            // 이거랑 상응하는 엔딩 씬 하나 더 만들어야 함
-            window.location.href = "Part_2_B_L_jail_ending.html" // 일단 임시로 이거 넣음
+        function clickChess() {
+            window.location.href = "chess.html";
+        } // 링크이동만들기
+
+        function getMessaggeSkel() {
+            const audio = new Audio('/static/sounds/rozer/integ/쇠사슬소리.mp3');
+            audio.play();
         }
 
-        function Story(){
-            alert("검은 구슬을 얻었다....!");
-            const audio = new Audio('music/치는소리6.mp3');
-            audio.play();
-            const imageSrc = "static/images/rozer/floor2/검정킹.png";
-            getItem(imageSrc);
+        function clkironmaiden() {
+            const die = confirm("체험 해 볼까?");
+            
+            if(die){
+                window.location.href = "../integ/Dead_stampede.html";
+            }
+            alert("아니다..그러지말자..");
+        } // 링크이동만들기
+
+        function clkironmaidenkey() {
+            const take = confirm("가시를 뽑아보겠습니까?")
+            
+            if(take){
+                const audio = new Audio('/static/sounds/rozer/integ/만능키소리.mp3');
+                audio.play();
+
+                const key = document.querySelector(".key");
+                key.style.display="none";
+                getItem("/static/images/rozer/integ/RozerCrystal.png");
+                alert("손에 구슬이 흘러들어왔다!");
+            }
         }
 
         function goToInventory() {
             window.location.href = "../integ/Inventory_temp.html";
-        }
+        } // 링크이동만들기
     </script>
 </body>
 </html>

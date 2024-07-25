@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +36,6 @@
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 10;
-            width: 50%;
         }
     </style>
 </head>
@@ -45,15 +44,15 @@
         <span class="text"></span>
     </div>
     <audio id="audio"></audio>
+<%--    링크이동만들기--%>
     <button class="redirect-button" onclick="location.href='the_door_main.html'">Go to Main Door</button>
-    <img src="귀신1.png" class="scary-image" id="scaryImage">
+    <img src="/static/images/rozer/integ/bloody_hand.png" class="scary-image" id="scaryImage">
 
     <script>
         const content = [
-            { text: "쇠사슬 소리   ", audio: "music/쇠사슬소리.mp3" },
-            { text: "바람소리", audio: "music/wind1.mp3" },
-            { text: "끔찍한 소리"},
-            { text: "곧이어 당신의 목을 누군가 조른다. 숨을 쉴 수 없다. 영원히...."}
+            { text: "   ", audio: "/static/sounds/rozer/integ/Nar_2_1.mp3" },
+            { text: "책상은 순식간에 무너져 당신을 덮친다.", audio: "/static/sounds/rozer/integ/Nar_2_2.mp3" },
+            { text: "끔찍한 죽음, 당신은 책장에 깔려 형체를 알아보기 힘들 정도로 찢겼다.", audio: "/static/sounds/rozer/integ/Nar_2_3.mp3" },
         ];
         const textElement = document.querySelector(".text");
         const audioElement = document.getElementById("audio");
@@ -78,7 +77,6 @@
                         setTimeout(() => {
                             redirectButton.style.display = 'block'; // 버튼을 보여줍니다.
                             scaryImage.style.display = 'block'; // 이미지 표시
-                            // 여기에 그림 나올 때 오디오 넣을게요(태림님ㅋ.ㅋ) --> audio = "music/scream2.mp3";
                         }, 3000); // 3초 후에 버튼과 이미지를 나타냅니다.
                     }
                     isDeleting = true; // 지울까요?를 true 변환
@@ -94,7 +92,7 @@
             } else {
                 clearInterval(typingInterval);
             }
-            setTimeout(typing, isDeleting ? 10 : 10); // 타이핑 속도와 지우기 속도 설정
+            setTimeout(typing, isDeleting ? 10 : 100); // 타이핑 속도와 지우기 속도 설정
         }
 
         function playAudio(audioSrc) {

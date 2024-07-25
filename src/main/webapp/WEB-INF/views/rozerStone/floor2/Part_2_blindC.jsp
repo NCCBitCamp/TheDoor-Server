@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@
             align-items: flex-end;
             height: 100vh; /* 화면 전체 높이로 설정 */
             margin: 0;
-            background-image: url("Part_2_bg.png");
+            background-image: url("Part_2_bg.png"); // 링크이동만들기
             background-size: cover; /* 이미지를 화면에 꽉 차게 설정 */
             background-position: center; /* 이미지를 화면 중앙에 위치 */
             background-repeat: no-repeat; /* 이미지를 반복하지 않게 설정 */
@@ -189,20 +189,21 @@
             <span class="text"></span>
         </div>
         <div class="overlay-container">
-            <img src="Part_2_C.png" class="middle bgimg">
-            <img src="image/고문대.png" class="tortureTable" onclick="enjoyTorture()">
-            <img src="image/레버.png" class="lever" onclick="movelever()">
-            <img src="image/레버받침대.png" class="leverBody">
-            <img src="image/해골C1.png" class="skelC1">
-            <img src="image/해골C2.png" class="skelC2">
-            <img src="image/해골C3.png" class="skelC3">
-            <img src="image/해골C4.png" class="skelC4">
-            <img src="image/해골C5.png" class="skelC5">
-            <img src="../integ/CROATOAN1.png" class="croatoan1">
-            <img src="../integ/CROATOAN2.png" class="croatoan2">
-            <img src="../integ/comment_area_bloody.png" class="comment_area">
+            <img src="/static/images/rozer/integ/Part_2_C.png" class="middle bgimg">
+            <img src="/static/images/rozer/integ/고문대.png" class="tortureTable" onclick="enjoyTorture()">
+            <img src="/static/images/rozer/integ/레버.png" class="lever" onclick="movelever()">
+            <img src="/static/images/rozer/integ/레버받침대.png" class="leverBody">
+            <img src="/static/images/rozer/integ/해골C1.png" class="skelC1">
+            <img src="/static/images/rozer/integ/해골C2.png" class="skelC2">
+            <img src="/static/images/rozer/integ/해골C3.png" class="skelC3">
+            <img src="/static/images/rozer/integ/해골C4.png" class="skelC4">
+            <img src="/static/images/rozer/integ/해골C5.png" class="skelC5">
+            <img src="/static/images/rozer/integ/CROATOAN1.png" class="croatoan1">
+            <img src="/static/images/rozer/integ/CROATOAN2.png" class="croatoan2">
+            <img src="/static/images/rozer/integ/comment_area_bloody.png" class="comment_area">
             <!-- <img src="comment_area_bloody2.png" class="comment_area" onclick="redirectToNaver()"> -->
         </div>
+<%--        링크이동만들기--%>
         <a href="Part_2_blindL_UNLOCK_0.html" class="carousel-control-prev" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </a>
@@ -225,7 +226,7 @@
 
         
         function getItem(imageSrc) {
-            const audio = new Audio('../integ/아이템을획득.mp3');
+            const audio = new Audio('/static/sounds/rozer/integ/아이템을획득.mp3');
             audio.play();
             let inventory = JSON.parse(localStorage.getItem('inventory')) || [];
             if (inventory.length < 6) { // 인벤토리에 아이템이 6개 이하인 경우만 추가
@@ -246,7 +247,7 @@
             
             if(enjoytorture == 1){
                 alert("자살을 선택했습니다.");
-                window.open('../integ/Dead_In_Dark.html');
+                window.open('../integ/Dead_In_Dark.html'); // 링크이동만들기
             }
             else{
                 alert('고문대가 움직입니다');
@@ -286,7 +287,6 @@
         function enjoyTorture() {
             if(enjoytorture == 0){
                 alert("고문대에 올라갔습니다.");
-                // 해골이 나를 덮쳤다 -> 천장화면으로 전환??ㄴㄴ
                 enjoytorture = 1;
             }
             else {
@@ -300,7 +300,7 @@
         }
 
         function goToInventory() {
-            window.location.href = "Inventory_temp.html";
+            window.location.href = "Inventory_temp.html"; // 링크이동만들기
         }
     </script>
 </body>

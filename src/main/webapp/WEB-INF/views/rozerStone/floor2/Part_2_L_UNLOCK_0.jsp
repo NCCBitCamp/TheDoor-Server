@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@
             align-items: flex-end;
             height: 100vh; /* 화면 전체 높이로 설정 */
             margin: 0;
-            background-image: url("Part_2_bg.png");
+            background-image: url("/static/images/rozer/integ/Part_2_bg.png");
             background-size: cover; /* 이미지를 화면에 꽉 차게 설정 */
             background-position: center; /* 이미지를 화면 중앙에 위치 */
             background-repeat: no-repeat; /* 이미지를 반복하지 않게 설정 */
@@ -110,28 +110,6 @@
             z-index: 1100; /* Above the modal */
             width: 100%; /* Adjust as needed */
         }
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7); /* 30% 투명도의 검정색 */
-            z-index: 9999; /* 다른 요소들 위에 올라오도록 설정 */
-            pointer-events: none; /* 클릭 등의 이벤트가 하위 요소로 전달되도록 함 */
-        }
-        .overlay-container::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 40%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 9999;
-            pointer-events: none;
-        }
     </style>
 </head>
 <body>
@@ -140,10 +118,10 @@
             <div class="text_box" data-trigger>
                 <span class="text"></span>
             </div>
-            <div class="overlay-container">
-                <img src="Part_2_L_UNLOCK_0.png" class="middle bgimg">
-                <img src="image/초상화뒤자물쇠.png" class="lock" onclick="lock()">
-                <img src="comment_area_bloody2.png" class="comment_area">
+            <div>
+                <img src="/static/images/rozer/integ/Part_2_L_UNLOCK_0.png" class="middle bgimg">
+                <img src="/static/images/rozer/integ/초상화뒤자물쇠.png" class="lock" onclick="lock()">
+                <img src="/static/images/rozer/integ/comment_area_bloody2.png" class="comment_area">
             </div>
             <button class="inventory_button" onclick="goToInventory()">인벤토리</button>
         </div>
@@ -160,7 +138,7 @@
     </div>
 
     <!-- Ghost Image -->
-    <img src="../floor1/image/귀신1.png" class="ghost" id="ghostImage">
+    <img src="/static/images/rozer/integ/귀신1.png" class="ghost" id="ghostImage">
 
     <script>
         const content = "시선을 돌릴 수 없다... 여기에 뭔가 있어!";
@@ -202,8 +180,8 @@
         function checkCode() {
             const code = document.getElementById('codeInput').value;
             if (code.toLowerCase() === 'king') {
-                window.location.href = "Part_2_blindL_UNLOCK.html";
-            } else {
+                window.location.href = "Part_2_L_UNLOCK.html";
+            } else { // 링크이동만드릭
                 modal.style.display = "none";
                 showGhost();
             }
@@ -212,7 +190,7 @@
         function showGhost() {
             const ghost = document.getElementById('ghostImage');
             ghost.style.display = "block";
-            const laughAudio = new Audio('music/웃음소리1.mp3');
+            const laughAudio = new Audio('/static/sounds/rozer/integ/웃음소리1.mp3');
             laughAudio.play();
             setTimeout(() => {
                 ghost.style.display = "none";
@@ -221,7 +199,7 @@
 
         function goToInventory() {
             window.location.href = "../integ/Inventory_temp.html";
-        }
+        } // 링크이동만들기
     </script>
 </body>
 </html>

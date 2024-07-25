@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <div class="time-left" style="color: brown;"></div>
-    <script src="sharedTimer.js"></script>
-    <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+    <script src="/static/js/rozer/sharedTimer.js"></script>
 
     <!-- <script type="module">
         import { sharedTimer } from './sharedTimer.js';
@@ -77,12 +76,13 @@
             <span class="text"></span>
         </div>
         <div>
-            <img src="static/images/rozer/floor2/Part_2_C_Dark.png" class="middle bgimg">
-            <img src="comment_area_bloody.png" class="comment_area" onclick="redirectToNaver()">
+            <img src="/static/images/rozer/integ/Part_2_C_Dark.png" class="middle bgimg">
+            <img src="/static/images/rozer/integ/comment_area_bloody.png" class="comment_area" onclick="redirectToNaver()">
         </div>
         <a href="Part_2_Ld.html" class="carousel-control-prev" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </a>
+<%--        링크이동만들기--%>
         <a href="Part_2_Rd.html" class="carousel-control-next" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
         </a>
@@ -108,7 +108,7 @@
         // }
         
         function getItem(imageSrc) {
-            const audio = new Audio('../integ/아이템을획득.mp3');
+            const audio = new Audio('/static/sounds/rozer/integ/아이템을획득.mp3');
             audio.play();
             let inventory = JSON.parse(localStorage.getItem('inventory')) || [];
             if (inventory.length < 6) { // 인벤토리에 아이템이 6개 이하인 경우만 추가
@@ -122,7 +122,7 @@
 
         function goToInventory() {
             window.location.href = "../integ/Inventory_temp.html";
-        }
+        }// 링크이동만들기
     </script>
 </body>
 </html>

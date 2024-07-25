@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@
             align-items: flex-end;
             height: 100vh; /* 화면 전체 높이로 설정 */
             margin: 0;
-            background-image: url("Part_2_bg.png");
+            background-image: url("/static/images/rozer/integ/Part_2_bg.png");
             background-size: cover; /* 이미지를 화면에 꽉 차게 설정 */
             background-position: center; /* 이미지를 화면 중앙에 위치 */
             background-repeat: no-repeat; /* 이미지를 반복하지 않게 설정 */
@@ -50,9 +50,9 @@
         }
         .lock {
             position: absolute;
-            bottom: 60%; 
-            left: 46%; 
-            width: 1%; 
+            bottom: 58.7%; 
+            left: 43.3%; 
+            width: 1%;
             z-index: 3; 
         }
         .inventory_button {
@@ -68,47 +68,9 @@
             cursor: pointer;
             border-radius: 5px;
         }
-        .modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1000; /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgb(73, 8, 8); /* Fallback color */
-            background-color: rgba(80, 6, 6, 0.4); /* Black w/ opacity */
-        }
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto; /* 15% from the top and centered */
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%; /* Could be more or less, depending on screen size */
-            max-width: 400px;
-            text-align: center;
-        }
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        .ghost {
-            display: none;
-            position: fixed;
-            top: 47%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1100; /* Above the modal */
-            width: 100%; /* Adjust as needed */
+        .carousel-control-next {
+            display: none; /* Initially hidden */
+            top: 50%;
         }
     </style>
 </head>
@@ -119,10 +81,14 @@
                 <span class="text"></span>
             </div>
             <div>
-                <img src="Part_2_L_UNLOCK_0.png" class="middle bgimg">
-                <img src="image/초상화뒤자물쇠.png" class="lock" onclick="lock()">
-                <img src="comment_area_bloody2.png" class="comment_area">
+                <img src="/static/images/rozer/integ/Part2_L_UNLOCK.png" class="middle bgimg">
+                <img src="/static/images/rozer/integ/square1.png" class="lock" onclick="switchclick()">
+                <img src="/static/images/rozer/integ/comment_area_bloody2.png" class="comment_area">
             </div>
+<%--            링크이동만들기--%>
+            <a href="Part_2_C_UNLOCK.html" class="carousel-control-next" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
             <button class="inventory_button" onclick="goToInventory()">인벤토리</button>
         </div>
     </span>
@@ -137,11 +103,8 @@
         </div>
     </div>
 
-    <!-- Ghost Image -->
-    <img src="../floor1/image/귀신1.png" class="ghost" id="ghostImage">
-
     <script>
-        const content = "시선을 돌릴 수 없다... 여기에 뭔가 있어!";
+        const content = "서둘러야 해...! 뭔가 오고 있어!!!!!!!";
         const text = document.querySelector(".text");
         let i = 0;
 
@@ -154,52 +117,22 @@
         }
         setInterval(typing, 50);
 
-        function lock() {
-            // Display the modal
-            document.getElementById('myModal').style.display = "block";
-        }
+        function switchclick() {
+            // Play the sound
+            const audio = new Audio('/static/sounds/rozer/integ/돌버튼2.mp3');
+            const audio2 = new Audio('/static/sounds/rozer/integ/문열기5.mp3');
+            audio.play();
 
-        // Get the modal
-        const modal = document.getElementById("myModal");
-
-        // Get the <span> element that closes the modal
-        const span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-
-        function checkCode() {
-            const code = document.getElementById('codeInput').value;
-            if (code.toLowerCase() === 'king') {
-                window.location.href = "Part_2_L_UNLOCK.html";
-            } else {
-                modal.style.display = "none";
-                showGhost();
-            }
-        }
-
-        function showGhost() {
-            const ghost = document.getElementById('ghostImage');
-            ghost.style.display = "block";
-            const laughAudio = new Audio('music/웃음소리1.mp3');
-            laughAudio.play();
+            // Show the next control after 1 second
             setTimeout(() => {
-                ghost.style.display = "none";
-            }, 500);
+                audio2.play();
+                document.querySelector('.carousel-control-next').style.display = 'block';
+            }, 2000);
         }
 
         function goToInventory() {
             window.location.href = "../integ/Inventory_temp.html";
-        }
+        }// 링크이동만들기
     </script>
 </body>
 </html>

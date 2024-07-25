@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@
             align-items: flex-end;
             height: 100vh; /* 화면 전체 높이로 설정 */
             margin: 0;
-            background-image: url("Part_2_bg.png");
+            background-image: url("/static/images/rozer/integ/Part_2_bg.png");
             background-size: cover; /* 이미지를 화면에 꽉 차게 설정 */
             background-position: center; /* 이미지를 화면 중앙에 위치 */
             background-repeat: no-repeat; /* 이미지를 반복하지 않게 설정 */
@@ -145,19 +145,20 @@
                 <span class="text"></span>
             </div>
             <div>
-                <img src="Part_2_L.png" class="middle bgimg">
-                <img src="image/초상화1-1.PNG" class="pic" onclick="showqueen()">
-                <img src="image/해골8.png" class="rib" onclick="bonessound()">
-                <img src="image/해골1.png" class="sekl1" onclick="bonessound()">
-                <img src="image/벌레.png" class="bug" onclick="insect()">
-                <img src="image/화로.png" class="hwaroblock" onclick="gethwaro()">
-                <img src="image/쇠사슬4.png" class="chain" onclick="chainsound()">
-                <img src="image/해골6.png" class="sekl_Head" onclick="bonessound()">
-                <img src="comment_area_bloody2.png" class="comment_area" onclick="redirectToNaver()">
+                <img src="/static/images/rozer/integ/Part_2_L.png" class="middle bgimg">
+                <img src="/static/images/rozer/integ/초상화1-1.PNG" class="pic" onclick="showqueen()">
+                <img src="/static/images/rozer/integ/해골8.png" class="rib" onclick="bonessound()">
+                <img src="/static/images/rozer/integ/해골1.png" class="sekl1" onclick="bonessound()">
+                <img src="/static/images/rozer/integ/벌레.png" class="bug" onclick="insect()">
+                <img src="/static/images/rozer/integ/화로.png" class="hwaroblock" onclick="gethwaro()">
+                <img src="/static/images/rozer/integ/쇠사슬4.png" class="chain" onclick="chainsound()">
+                <img src="/static/images/rozer/integ/해골6.png" class="sekl_Head" onclick="bonessound()">
+                <img src="/static/images/rozer/integ/comment_area_bloody2.png" class="comment_area" onclick="redirectToNaver()">
             </div>
-            <a href="Part_2_B.html" class="carousel-control-prev" data-bs-slide="prev">
+            <a href="Part_2_B.jsp" class="carousel-control-prev" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
             </a>
+<%--            위아래링크이동만들기--%>
             <a href="Part_2_C.html" class="carousel-control-next" data-bs-slide="next">
                 <span class="carousel-control-next-icon"></span>
             </a>
@@ -184,7 +185,7 @@
         // }
         
         function getItem(imageSrc) {
-            const audio = new Audio('../integ/아이템을획득.mp3');
+            const audio = new Audio('/static/sounds/rozer/integ/아이템을획득.mp3');
             audio.play();
             let inventory = JSON.parse(localStorage.getItem('inventory')) || [];
             if (inventory.length < 6) { // 인벤토리에 아이템이 6개 이하인 경우만 추가
@@ -217,18 +218,18 @@
             
             // 2초 후에 초상화 이미지 변경 및 애니메이션 시작
             setTimeout(() => {
-                pic.src = 'image/초상화2-1.PNG';
+                pic.src = '/static/images/rozer/integ/초상화2-1.PNG';
                 changeImageSequence();
             }, 3000);
         }
 
         function changeImageSequence() {
             const pic = document.querySelector('.pic');
-            const images = ['image/초상화3-1.PNG', 'image/초상화4-1.PNG'];
+            const images = ['/static/images/rozer/integ/초상화3-1.PNG', '/static/images/rozer/integ/초상화4-1.PNG'];
             let index = 0;
 
             function toggleImages() {
-                const audio1 = new Audio('music/여왕목소리2.mp3');
+                const audio1 = new Audio('/static/sounds/rozer/integ/여왕목소리2.mp3');
                 audio1.play();
                 setTimeout(() => {
                     pic.src = images[index % 2];
@@ -250,7 +251,7 @@
 
             // 0.5초 후에 원래 이미지로 복원
             setTimeout(() => {
-                pic.src = 'image/초상화1-1.PNG';
+                pic.src = '/static/images/rozer/integ/초상화1-1.PNG';
                 pic.style.transition = 'transform 2s';
                 pic.style.transform = 'scale(1)';
 
@@ -264,10 +265,10 @@
 
         function gethwaro(){
             alert("무딘 칼을 얻었다...!");
-            const audio = new Audio('music/치는소리6.mp3');
+            const audio = new Audio('/static/sounds/rozer/integ/치는소리6.mp3');
             audio.play();
-            const imageSrc = "나무칼.png";
-            getItem(imageSrc);
+            const imageSrc = "/static/images/rozer/integ/나무칼.png";
+            getItem(imageSrc); // 이미지링크 확인하기*********************************************
             
             // 화로 이미지 클릭 비활성화
             const bornfire = document.querySelector('.hwaroblock');
@@ -283,7 +284,7 @@
 
         function bonessound(){
             if (!isbonesPlayed) {
-                const audio = new Audio('music/치는소리5.mp3');
+                const audio = new Audio('/static/sounds/rozer/integ/치는소리5.mp3');
                 audio.play();
                 isbonesPlayed = true;
                 const currentMessage = "생각했던 것보다 더욱 탁한 소리이다...";
@@ -293,7 +294,7 @@
 
         function chainsound(){
             if (!ischainPlayed) {
-                const audio = new Audio('music/쇠사슬소리.mp3');
+                const audio = new Audio('/static/sounds/rozer/integ/쇠사슬소리.mp3');
                 audio.play();
                 ischainPlayed = true;
                 const currentMessage = "생각했던 것보다 정신사나운 소리이다...";
@@ -303,7 +304,7 @@
 
         function goToInventory() {
             window.location.href = "../integ/Inventory_temp.html";
-        }
+        }//링크이동만들기
     </script>
 </body>
 </html>

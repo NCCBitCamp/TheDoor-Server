@@ -1,15 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RozerStone</title>
   <link rel="icon" href="../favicon-16x16.png">
-  <link rel="stylesheet" href="chess.css">
-  <script src="chess.js"></script>
+  <link rel="stylesheet" href="/static/css/rozer/chess.css">
+  <script src="/static/js/rozer/chess.js"></script>
 </head>
-<body style="background-image: url('static/images/rozer/floor2/체스테이블.jpg');" onclick="flag()">
+<body style="background-image: url('/static/images/rozer/integ/체스테이블.jpg');" onclick="flag()">
   <div>
     <table>
       <tr>
@@ -99,7 +100,7 @@
   <script>
 
     function back(){
-      window.location.href = "Part_2_R.html";
+      window.location.href = "Part_2_R.html"; // 링크이동만들기
     }
 
   </script>

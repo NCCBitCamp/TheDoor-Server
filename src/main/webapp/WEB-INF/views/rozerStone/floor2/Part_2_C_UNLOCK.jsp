@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +21,7 @@
             align-items: flex-end;
             height: 100vh; /* 화면 전체 높이로 설정 */
             margin: 0;
-            background-image: url("Part_2_bg.png");
+            background-image: url("/static/images/rozer/integ/Part_2_bg.png");
             background-size: cover; /* 이미지를 화면에 꽉 차게 설정 */
             background-position: center; /* 이미지를 화면 중앙에 위치 */
             background-repeat: no-repeat; /* 이미지를 반복하지 않게 설정 */
@@ -150,10 +150,10 @@
             <span class="text"></span>
         </div>
         <div>
-            <img src="Part_2_C_UNLOCK.png" class="middle bgimg">
-            <img src="image/square1.png" class="door1" onclick="doorclick()">
-            <img src="image/square1.png" class="door1maze" onclick="mazeclick()">
-            <img src="../integ/comment_area_bloody.png" class="comment_area">
+            <img src="/static/images/rozer/integ/Part_2_C_UNLOCK.png" class="middle bgimg">
+            <img src="/static/images/rozer/integ/square1.png" class="door1" onclick="doorclick()">
+            <img src="/static/images/rozer/integ/square1.png" class="door1maze" onclick="mazeclick()">
+            <img src="/static/images/rozer/integ/comment_area_bloody.png" class="comment_area">
         </div>
         <button class="inventory_button" onclick="goToInventory()">인벤토리</button>
     </span>
@@ -162,7 +162,7 @@
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
-            <img src="image/비밀문미로돌판.png" alt="Maze Image">
+            <img src="/static/images/rozer/integ/비밀문미로돌판.png" alt="Maze Image">
             <input type="text" id="codeInput" placeholder="number">
             <button onclick="submitCode()">Submit</button>
         </div>
@@ -188,10 +188,10 @@
             if (!isSolvemaze) {
                 alert("미는 건 어림도 없을 것 같다.....");
             } else {
-                const audio = new Audio('music/돌밀기1.mp3');
+                const audio = new Audio('/static/sounds/rozer/integ/돌밀기1.mp3');
                 audio.play();
                 window.location.href = "../floor3/Part_3_Pre.html";
-            }
+            } // 링크이동만들기
         }
 
         function mazeclick(){
@@ -201,7 +201,7 @@
             setTimeout(() => {
                 if (!isSolvemaze) {
                     window.location.href = "../floor1/Dead_In_Dark.html";
-                }
+                } // 링크이동만들기
             }, 10000); // 10초 후 실행
         }
 
@@ -225,7 +225,7 @@
 
         function goToInventory() {
             window.location.href = "../integ/Inventory_temp.html";
-        }
+        } // 링크이동 만들기
     </script>
 </body>
 </html>

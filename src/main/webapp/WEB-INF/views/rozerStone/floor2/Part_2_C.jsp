@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@
             align-items: flex-end;
             height: 100vh; /* 화면 전체 높이로 설정 */
             margin: 0;
-            background-image: url("Part_2_bg.png");
+            background-image: url("/static/images/rozer/integ/Part_2_bg.png");
             background-size: cover; /* 이미지를 화면에 꽉 차게 설정 */
             background-position: center; /* 이미지를 화면 중앙에 위치 */
             background-repeat: no-repeat; /* 이미지를 반복하지 않게 설정 */
@@ -166,23 +166,24 @@
             <span class="text"></span>
         </div>
         <div>
-            <img src="Part_2_C.png" class="middle bgimg">
-            <img src="image/고문대.png" class="tortureTable" onclick="enjoyTorture()">
-            <img src="image/레버.png" class="lever" onclick="iskingtrue()">
-            <img src="image/레버받침대.png" class="leverBody">
-            <img src="image/해골C1.png" class="skelC1">
-            <img src="image/해골C2.png" class="skelC2">
-            <img src="image/해골C3.png" class="skelC3">
-            <img src="image/해골C4.png" class="skelC4">
-            <img src="image/해골C5.png" class="skelC5">
-            <img src="../integ/CROATOAN1.png" class="croatoan1">
-            <img src="../integ/CROATOAN2.png" class="croatoan2">
-            <img src="../integ/comment_area_bloody.png" class="comment_area" onclick="redirectToNaver()">
+            <img src="/static/images/rozer/integ/Part_2_C.png" class="middle bgimg">
+            <img src="/static/images/rozer/integ/고문대.png" class="tortureTable" onclick="enjoyTorture()">
+            <img src="/static/images/rozer/integ/레버.png" class="lever" onclick="iskingtrue()">
+            <img src="/static/images/rozer/integ/레버받침대.png" class="leverBody">
+            <img src="/static/images/rozer/integ/해골C1.png" class="skelC1">
+            <img src="/static/images/rozer/integ/해골C2.png" class="skelC2">
+            <img src="/static/images/rozer/integ/해골C3.png" class="skelC3">
+            <img src="/static/images/rozer/integ/해골C4.png" class="skelC4">
+            <img src="/static/images/rozer/integ/해골C5.png" class="skelC5">
+            <img src="/static/images/rozer/integ/CROATOAN1.png" class="croatoan1">
+            <img src="/static/images/rozer/integ/CROATOAN2.png" class="croatoan2">
+            <img src="/static/images/rozer/integ/comment_area_bloody.png" class="comment_area" onclick="redirectToNaver()">
             <!-- <img src="comment_area_bloody2.png" class="comment_area" onclick="redirectToNaver()"> -->
         </div>
         <a href="Part_2_L.html" class="carousel-control-prev" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </a>
+<%--        링크이동만들기--%>
         <a href="Part_2_R.html" class="carousel-control-next" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
         </a>
@@ -204,7 +205,7 @@
         setInterval(typing, 100);
         
         function getItem(imageSrc) {
-            const audio = new Audio('music/공통/아이템획득소리2.mp3');
+            const audio = new Audio('/static/sounds/rozer/integ/아이템획득소리2.mp3');
             audio.play();
             let inventory = JSON.parse(localStorage.getItem('inventory')) || [];
             if (inventory.length < 6) { // 인벤토리에 아이템이 6개 이하인 경우만 추가
@@ -220,6 +221,7 @@
             let inventory = JSON.parse(localStorage.getItem('inventory')) || []; // Get inventory from localStorage
 
             // Check if '검정킹.png' exists in the inventory
+            // 확인하기 검정킹*******************************************잘되나*************************
             const index = inventory.indexOf('검정킹.png');
             if (index !== -1) {
                 inventory.splice(index, 1); // Remove '검정킹.png' from the inventory
@@ -241,7 +243,7 @@
             
             if(enjoytorture == 1){
                 window.location.href = "Part_2_blindC.html";
-            }
+            } // 링크이동만들기
             else{
                 alert('고문대가 움직입니다');
                 const skel1 = document.querySelector('.skelC1');
@@ -278,7 +280,7 @@
 
             const prevIcon = document.querySelector('.carousel-control-prev-icon');
             prevIcon.parentElement.href = 'Part_2_L_UNLOCK_0.html';
-        }
+        } // 링크이동만들기
 
         var enjoytorture = 0;
         function enjoyTorture() {
@@ -299,7 +301,7 @@
 
         function goToInventory() {
             window.location.href = "../integ/Inventory_temp.html";
-        }
+        }// 링크이동만들기
     </script>
 </body>
 </html>

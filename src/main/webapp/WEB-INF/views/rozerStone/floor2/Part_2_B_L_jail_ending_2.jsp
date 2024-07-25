@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,6 +48,12 @@
         .fade-in {
             opacity: 1 !important;
         }
+        .fullscreen {
+            width: 100% !important;
+            height: 100% !important;
+            top: 0 !important;
+            left: 0 !important;
+        }
         .inventory_button {
             position: absolute;
             bottom: 5%;
@@ -70,18 +76,15 @@
             <span class="text"></span>
         </div>
         <div>
-            <img src="comment_area_bloody2.png" class="comment_area" onclick="showNextDialogue()">
+            <img src="/static/images/rozer/integ/comment_area_bloody2.png" class="comment_area" onclick="showNextDialogue()">
         </div>
-        <img src="image/해골10.png" id="skull10" class="fade-in-image">
-        <img src="image/해골11.png" id="skull11" class="fade-in-image">
-        <img src="image/해골12.png" id="skull12" class="fade-in-image">
-        <img src="image/해골13.png" id="skull13" class="fade-in-image">
+        <img src="/static/images/rozer/integ/해골13.png" id="skull13" class="fade-in-image">
     </span>
     <script>
         const content = [
-            { text: "어라....? ", audio: "music/부스럭1.mp3" },
-            { text: "잠깐만 잠깐만!!" },
-            { text: "어라...넌 아까 봤던...그 해골...?", audio: "music/scream2.mp3" }
+            { text: "뭐야...어디갔어", audio: "/static/sounds/rozer/integ/부스럭1.mp3" },
+            { text: "어디갔어!!!!!!" },
+            { text: "어디....어디로...어디로 간거야...", audio: "/static/sounds/rozer/integ/scream2.mp3" }
         ];
         const text = document.querySelector(".text");
         let dialogueIndex = 0;
@@ -102,7 +105,7 @@
         }
 
         function showSkullSequence() {
-            const skullImages = ['skull10','skull11','skull12','skull13'];
+            const skullImages = ['skull13'];
             let index = 0;
 
             function showNextSkull() {
@@ -116,14 +119,20 @@
                         currentSkull.classList.add('fade-in');
                     }, 100);
                     if (index === skullImages.length - 1) {
-                        const laughAudio = new Audio('music/웃음소리1.mp3');
+                        const laughAudio = new Audio('/static/sounds/rozer/integ/웃음소리1.mp3');
                         laughAudio.play();
-                        document.body.style.backgroundColor = '#3B0B17'; // 검붉은색으로 배경 변경
+                        document.body.style.backgroundColor = '#2A0A12'; // 검붉은색으로 배경 변경
                         setTimeout(() => {
-                            text.innerHTML = "당신이 여기 있었던.....사람...인가요....?";
+                            text.innerHTML = "잠깐 다가오지 마... 다가오지 마........";
                             setTimeout(() => {
-                                window.location.href = "Part_2_B_L_jail_ending_2.html";
-                            }, 5000);
+                                currentSkull.classList.add('fullscreen');
+                                setTimeout(() => {
+                                    document.body.style.backgroundColor = 'black';
+                                    setTimeout(() => {
+                                        window.location.href = "../../Main/index.html"; // 링크이동만들기
+                                    }, 5000);
+                                }, 1000);
+                            }, 1000);
                         }, 2000);
                     }
                     index++;

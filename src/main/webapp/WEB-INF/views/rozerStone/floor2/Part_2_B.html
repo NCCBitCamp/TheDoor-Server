@@ -14,7 +14,7 @@
             align-items: flex-end;
             height: 100vh; /* 화면 전체 높이로 설정 */
             margin: 0;
-            background-image: url("Part_2_bg.png");
+            background-image: url("static/images/rozer/floor2/Part_2_bg.png");
             background-size: cover; /* 이미지를 화면에 꽉 차게 설정 */
             background-position: center; /* 이미지를 화면 중앙에 위치 */
             background-repeat: no-repeat; /* 이미지를 반복하지 않게 설정 */
@@ -127,8 +127,8 @@
         </div>
         <div>
             <img src="Part_2_B.png" class="middle bgimg">
-            <img src="image/square1.png" class="square_L" onclick="badskullending()">
-            <img src="image/square1.png" class="square_R" onclick="Story()">
+            <img src="static/images/rozer/floor2/square1.png" class="square_L" onclick="badskullending()">
+            <img src="static/images/rozer/floor2/square1.png" class="square_R" onclick="Story()">
             <img src="comment_area_bloody2.png" class="comment_area" onclick="redirectToNaver()">
         </div>
         <a href="Part_2_R.html" class="carousel-control-prev" data-bs-slide="prev">
@@ -180,7 +180,7 @@
             alert("검은 구슬을 얻었다....!");
             const audio = new Audio('music/치는소리6.mp3');
             audio.play();
-            const imageSrc = "검정킹.png";
+            const imageSrc = "static/images/rozer/floor2/검정킹.png";
             getItem(imageSrc);
         }
 

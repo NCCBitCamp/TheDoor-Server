@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Door of The Hostel</title>
-    <link rel="icon" type="image/x-icon" href="static/images/main/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/static/images/main/favicon.ico">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.55.2/phaser.min.js"></script>
     <style>
         body {
@@ -146,7 +146,7 @@
         zoneHostel.on('pointerdown', () => {
             game.scene.scenes[0].sound.play('hostelDoorOpen');
             game.scene.scenes[0].time.delayedCall(1500, () => {
-                window.location.href = './../TheHostel/HTML/01_the_hostel.html';
+                window.location.href = '/theHostel/the-hostel.do';
             });
         });
         zoneHostel.on('pointerover', () => {

@@ -146,7 +146,7 @@
         zone502.on('pointerdown', () => {
             game.scene.scenes[0].sound.play('502DoorOpen');
             game.scene.scenes[0].time.delayedCall(1500, () => {
-                window.location.href = '../BitCamp/502Room.html';
+                window.location.href = '${pageContext.request.contextPath}/bitCamp/502Room.do';
             });
         });
         zone502.on('pointerover', () => {

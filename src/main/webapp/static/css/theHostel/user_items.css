@@ -1,0 +1,179 @@
+/* 모달 속 내용 */
+.useritem_modal-content {
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    height: auto;
+    pointer-events: auto;
+    flex-wrap: wrap; 
+    align-content: space-around;
+    border: none;
+}
+.useritem_modal-body {
+    position: fixed;
+    right: 0;
+    height: auto;
+    /* background-color: rgba(116, 66, 33, 0.877); */
+    background-image: url(/static/images/theHostel/useritem/아이템창.jpg);
+}
+/* .useritem_modal-body {
+    position: fixed;
+    top: 35%;
+    right: 0;
+    transform: translateY(-50%);
+    background-image: url(../사용자아이템창/아이템창우주최종2.jpg);
+} */
+
+/* 버튼 위치 */
+#button-item {
+    width: auto;
+    height: auto;
+    font-size: 24px; /* 아이콘 크기 조정 */
+    position: absolute; /* game-container 내부에서 절대 위치 설정 */
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+}
+
+/* 버튼 색 */
+.btn-primary-item {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: rgba(116, 66, 33, 0.877);
+    --bs-btn-border-color: rgba(116, 66, 33, 0.877);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: rgb(116, 66, 33);
+    --bs-btn-hover-border-color: rgb(116, 66, 33);
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: rgb(116, 66, 33);
+    --bs-btn-active-border-color: rgb(116, 66, 33);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: rgba(116, 66, 33, 0.877);;
+    --bs-btn-disabled-border-color: rgba(116, 66, 33, 0.877);
+    background-color: rgba(116, 66, 33, 0.877); /* 기본 배경 색상 설정 */
+}
+
+/* 모달 창 오른쪽 정렬 */
+/* .modal-dialog-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+} */
+
+/*-----------------------*/
+/*    아이템 매핑 box     */
+/*-----------------------*/
+.box1-item {
+    width: 10rem;
+    height: 9.0rem;
+    border-radius: 10%;
+    background-repeat : no-repeat;
+    background-position: bottom;
+    /*-----------------------*/
+    /*아이템 획득시 추가할 내용*/
+    /*-----------------------*/
+    background-image: url(/static/images/theHostel/useritem/칵테일잔.PNG);
+    background-size: 50%;
+    cursor:pointer;
+}
+
+.box2-item {
+    text-align: center;
+    width: 10rem;
+    height: 9rem;
+    border-radius: 10%;
+    background-repeat : no-repeat;
+    background-position: center;
+    background-image: url(/static/images/theHostel/useritem/깨진액자.PNG);
+    background-size: 80%;
+    cursor:pointer;
+}
+
+.box3-item {
+    text-align: center;
+    width: 10rem;
+    height: 8.6rem;
+    border-radius: 10%;
+    background-repeat : no-repeat;
+    background-position: center;
+    background-image: url(/static/images/theHostel/useritem/심장.PNG);
+    background-size: 50%;
+    cursor:pointer;
+}
+
+.box4-item {
+    text-align: center;
+    width: 10rem;
+    height: 8.6rem;
+    border-radius: 10%;
+    background-repeat : no-repeat;
+    background-position: center;
+    background-image: url(/static/images/theHostel/useritem/가위.png);
+    background-size: 80%;
+    cursor:pointer;
+}
+
+.box4-1-item {
+    text-align: center;
+    width: 10rem;
+    height: 8.6rem;
+    border-radius: 10%;
+    background-repeat : no-repeat;
+    background-position: center;
+    background-image: url(/static/images/theHostel/useritem/쟁미.png);
+    background-size: cover;
+    cursor:pointer;
+}
+
+.box5-item {
+    text-align: center;
+    width: 10rem;
+    height: 8.7rem;
+    border-radius: 10%;
+    background-repeat : no-repeat;
+    background-position: center;
+    background-image: url(/static/images/theHostel/useritem/손목시계.PNG);
+    background-size: 75%;
+    cursor:pointer;
+}
+.box6-item {
+    text-align: center;
+    width: 10rem;
+    height:8.6rem;
+    border-radius: 10%;
+    background-repeat : no-repeat;
+    background-position: center;
+    background-image: url(/static/images/theHostel/useritem/반지.PNG);
+    background-size: 70%;
+    cursor:pointer;
+}
+
+.box7-item {
+    text-align: center;
+    width: 10rem;
+    height: 8.6rem;
+    border-radius: 10%;
+    background-repeat : no-repeat;
+    background-position: center;
+    background-image: url(/static/images/theHostel/useritem/동전.png);
+    background-size: 75%;
+    cursor:pointer;
+}
+
+/* 아이템 박스 숨기기 */
+/* .box1-item,
+.box2-item,
+.box3-item,
+.box4-item,
+.box5-item,
+.box6-item,
+.box7-item {
+    visibility: hidden;
+}
+처음에 아이템 박스를 숨깁니다 */

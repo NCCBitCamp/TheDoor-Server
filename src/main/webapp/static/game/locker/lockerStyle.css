@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+
+@font-face {
+    font-family: 'yleeMortalHeartImmortalMemory';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/yleeMortalHeartImmortalMemory.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    /*background-color: var(--color-black);*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 23rem;
+    background-color: #661717;
+}
+
+.container {
+    display: flex;
+}
+
+.patternbox {
+    border: 2px solid black;
+    border-radius: 3px;
+    margin: 1px;
+    /* font-size: 2.5rem; */
+    /* font-weight: 700; */
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    background-color: aliceblue;
+    /* justify-content: center;
+    align-items: center;
+    text-transform: uppercase; */
+    cursor: pointer;
+    /* 왼쪽으로 정렬하는 기능 */
+    float: left;
+}
+
+.clearbtn {
+    display: inline-block;
+    height: 2rem;
+    width: 8rem;
+    background-color: #b9751c;
+    border: 3px solid white;
+    cursor: pointer;
+}
+
+.clearbtn.active {
+    box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.4);
+    /*background-color: linear-gradient(to bottom, #fff 0%, #3d1e0e 100%);*/
+}
+
+#back-button {
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: "Homemade Apple", 'yleeMortalHeartImmortalMemory', cursive;
+}

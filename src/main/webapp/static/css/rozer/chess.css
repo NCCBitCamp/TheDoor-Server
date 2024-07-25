@@ -1,0 +1,126 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0 auto;
+}
+table {
+    border-collapse: collapse;
+    border: 1px solid maroon;
+}
+tr{
+    justify-content: center;
+    align-items: center;
+}
+td {
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    border: 1px solid maroon;
+  }
+  
+  .black {
+    background-color: rgba(16, 6, 6, 0.95);
+    border-collapse: collapse;
+    position: relative;
+  }
+  
+  .white {
+    background-color: rgba(69, 69, 69, 0.95);
+    border-collapse: collapse;
+    position: relative;
+  }
+  
+  .possible-move {
+    background-color: brown;
+    opacity: 0.9;
+    border-collapse: collapse;
+    position: relative;
+    z-index: 5;
+  }
+/*   
+  .black-square {
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    position: relative;
+  } */
+  
+  .black-pawn {
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: url("image/pawn.png");
+    border: 1px solid brown;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .black-rook {
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background: url("image/rook.png");
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .black-knight {
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background: url("image/knight.png");
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .black-bishop {
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background: url("image/bishop.png");
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .black-queen {
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background: url("image/queen.png");
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  
+  .black-back {
+    z-index: 2;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: url(image/blank.png);
+  }
+
+  .black-back:hover {
+    background: rgba(69, 69, 69, 1);
+  }
+  

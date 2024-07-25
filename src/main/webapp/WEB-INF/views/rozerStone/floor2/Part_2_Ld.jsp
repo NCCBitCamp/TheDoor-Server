@@ -79,11 +79,10 @@
             <img src="/static/images/rozer/integ/Part_2_L_Dark.png" class="middle bgimg">
             <img src="/static/images/rozer/integ/comment_area_bloody.png" class="comment_area" onclick="redirectToNaver()">
         </div>
-        <a href="Part_2_Ld.html" class="carousel-control-prev" data-bs-slide="prev">
+        <a href="/darkToLeft.do" class="carousel-control-prev" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </a>
-<%--        링크이동만들기--%>
-        <a href="Part_2_Cd.jsp" class="carousel-control-next" data-bs-slide="next">
+        <a href="/darkToCenter.do" class="carousel-control-next" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
         </a>
         <button class="inventory_button" onclick="goToInventory()">인벤토리</button>

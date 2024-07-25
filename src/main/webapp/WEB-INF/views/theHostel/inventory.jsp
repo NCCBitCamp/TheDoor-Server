@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inventory</title>
+    <script src="/static/js/theHostel/timer.js"></script>
     <link rel="icon" href="/static/images/theHostel/favicon.ico" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');

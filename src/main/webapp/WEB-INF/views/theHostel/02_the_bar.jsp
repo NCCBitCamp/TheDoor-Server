@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Bar</title>
+    <script src="/static/js/theHostel/timer.js"></script>
     <link rel="stylesheet" href="/static/css/theHostel/01_the_hostel.css">
     <link rel="icon" href="/static/images/theHostel/favicon.ico" type="image/x-icon">
 

@@ -62,7 +62,7 @@ public class RozerController {
 //    체스화면
     @RequestMapping("/lightChess.do")
     public String lightChess(){
-        return "rozerStone/floor2/Part_2_chess";
+        return "rozerStone/floor2/chess";
     }
 
 //**************************   블라인드 화면    **************************

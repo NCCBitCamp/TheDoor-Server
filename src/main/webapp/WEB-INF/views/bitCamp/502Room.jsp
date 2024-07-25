@@ -10,7 +10,8 @@
 <head>
     <meta charset="UTF-8">
     <title>5층 502호</title>
-    <link rel="icon" href="images/bitcamp_favicon.ico" type="image/x-icon">
+    <script src="/static/js/bitCamp/timer.js"></script>
+    <link rel="icon" href="/static/images/bitCamp/bitcamp_favicon.ico" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
     <style>
         body {
@@ -53,7 +54,7 @@
 </head>
 <body>
 <div id="game-container">
-    <button id="settings-button" onclick="openSettings()"><img src="images/settings-icon.svg" alt="Settings"></button>
+    <button id="settings-button" onclick="openSettings()"><img src="/static/images/bitCamp/settings-icon.svg" alt="Settings"></button>
 </div>
 
 <script>
@@ -212,23 +213,23 @@
 
 
     function preload() {
-        this.load.image('background1', 'static/images/bitCamp/wake01.png');
-        this.load.image('background2', 'static/images/bitCamp/mySeat.png');
-        this.load.image('background3', 'static/images/bitCamp/room502.png');
-        this.load.image('background4', 'static/images/bitCamp/room502door.png');
-        this.load.image('dialogueBox', 'static/images/bitCamp/wallpaper-torn-paper-ripped-white-paper.png');
-        this.load.image('cable', 'static/images/bitCamp/cable.png');
-        this.load.image('scissors', 'static/images/bitCamp/scissors.png');
-        this.load.image('memo1', 'static/images/bitCamp/memo1.png');
-        this.load.image('memo2', 'static/images/bitCamp/memo2.png');
-        this.load.image('memo1-1', 'static/images/bitCamp/memo1-1.png');
-        this.load.image('memo2-1', 'static/images/bitCamp/memo2-1.png');
-        this.load.image('bag', 'static/images/bitCamp/bag.svg');
-        this.load.audio('doorstopSound', 'static/sounds/bitCamp/문 덜컹덜컹.mp3');
-        this.load.audio('paperSound', 'static/sounds/bitCamp/종이 넘기는 소리.mp3');
-        this.load.audio('openDoorSound', 'static/sounds/bitCamp/열쇠로 문여는소리.mp3');
-        this.load.audio('bagSound', 'static/sounds/bitCamp/가방 여는 소리.wav');
-        this.load.audio('itemSound', 'static/sounds/bitCamp/아이템 획득 소리.mp3');
+        this.load.image('background1', '/static/images/bitCamp/wake01.png');
+        this.load.image('background2', '/static/images/bitCamp/mySeat.png');
+        this.load.image('background3', '/static/images/bitCamp/room502.png');
+        this.load.image('background4', '/static/images/bitCamp/room502door.png');
+        this.load.image('dialogueBox', '/static/images/bitCamp/wallpaper-torn-paper-ripped-white-paper.png');
+        this.load.image('cable', '/static/images/bitCamp/cable.png');
+        this.load.image('scissors', '/static/images/bitCamp/scissors.png');
+        this.load.image('memo1', '/static/images/bitCamp/memo1.png');
+        this.load.image('memo2', '/static/images/bitCamp/memo2.png');
+        this.load.image('memo1-1', '/static/images/bitCamp/memo1-1.png');
+        this.load.image('memo2-1', '/static/images/bitCamp/memo2-1.png');
+        this.load.image('bag', '/static/images/bitCamp/bag.svg');
+        this.load.audio('doorstopSound', '/static/sounds/bitCamp/문 덜컹덜컹.mp3');
+        this.load.audio('paperSound', '/static/sounds/bitCamp/종이 넘기는 소리.mp3');
+        this.load.audio('openDoorSound', '/static/sounds/bitCamp/열쇠로 문여는소리.mp3');
+        this.load.audio('bagSound', '/static/sounds/bitCamp/가방 여는 소리.wav');
+        this.load.audio('itemSound', '/static/sounds/bitCamp/아이템 획득 소리.mp3');
     }
 
     function create() {
@@ -391,7 +392,7 @@
             // 조건이 충족되면 새로운 선택지를 추가
             if (memo2Clicked && inventory.includes('가위') && inventory.includes('HDMI 케이블')) {
                 choices[2].newChoices.push(
-                    { text: "3. 특수한 방법을 사용한다.", nextTexts: ["(메모에서 본 대로라면..)", "가위로 HDMI 케이블의 피복을 벗겨내고 [철사]를 획득했다!", "[철사]를 이용해서 자물쇠를 해제했다.", "드디어 문이 열렸다!", ""], style: { fill: '#FF0000' }, action: () => { window.location.href = '../BitCamp/floor5.html'; } }
+                    { text: "3. 특수한 방법을 사용한다.", nextTexts: ["(메모에서 본 대로라면..)", "가위로 HDMI 케이블의 피복을 벗겨내고 [철사]를 획득했다!", "[철사]를 이용해서 자물쇠를 해제했다.", "드디어 문이 열렸다!", ""], style: { fill: '#FF0000' }, action: () => { window.location.href = '${pageContext.request.contextPath}/bitCamp/floor5.do'; } }
                 );
             }
 

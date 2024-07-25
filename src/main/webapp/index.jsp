@@ -148,6 +148,7 @@
 
         if (username === 'user' && password === 'pass') {
             localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('username', username);
             document.getElementById('login-container').style.display = 'none';
             document.getElementById('game-container').style.display = 'block';
         } else {

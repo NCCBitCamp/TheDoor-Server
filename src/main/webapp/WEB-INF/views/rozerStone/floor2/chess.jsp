@@ -100,7 +100,7 @@
   <script>
 
     function back(){
-      window.location.href = "Part_2_R.html"; // 링크이동만들기
+      window.history.back();
     }
 
   </script>

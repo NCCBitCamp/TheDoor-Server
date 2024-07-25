@@ -15,7 +15,7 @@
             align-items: flex-end;
             height: 100vh; /* 화면 전체 높이로 설정 */
             margin: 0;
-            background-image: url("Part_2_bg.png"); // 링크이동만들기
+            background-image: url("/static/images/rozer/integ/Part_2_bg.png"); // 링크이동만들기
             background-size: cover; /* 이미지를 화면에 꽉 차게 설정 */
             background-position: center; /* 이미지를 화면 중앙에 위치 */
             background-repeat: no-repeat; /* 이미지를 반복하지 않게 설정 */
@@ -204,7 +204,7 @@
             <!-- <img src="comment_area_bloody2.png" class="comment_area" onclick="redirectToNaver()"> -->
         </div>
 <%--        링크이동만들기--%>
-        <a href="Part_2_blindL_UNLOCK_0.html" class="carousel-control-prev" data-bs-slide="prev">
+        <a href="/blindLeft.do" class="carousel-control-prev" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </a>
         <button class="inventory_button" onclick="goToInventory()">인벤토리</button>
@@ -300,7 +300,7 @@
         }
 
         function goToInventory() {
-            window.location.href = "Inventory_temp.html"; // 링크이동만들기
+            window.location.href = "/inventory.do"; // 링크이동만들기
         }
     </script>
 </body>

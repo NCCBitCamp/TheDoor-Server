@@ -120,11 +120,11 @@
             <img src="/static/images/rozer/integ/체스판.png" class="chess" onclick="clickChess()">
             <img src="/static/images/rozer/integ/comment_area_bloody2.png" class="comment_area" onclick="redirectToNaver()">
         </div>
-        <a href="Part_2_C.html" class="carousel-control-prev" data-bs-slide="prev">
+        <a href="/lightToCenter.do" methods="post" class="carousel-control-prev" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </a>
 <%--        링크이동만들기--%>
-        <a href="Part_2_B.jsp" class="carousel-control-next" data-bs-slide="next">
+        <a href="/lightToBack.do" methods="post" class="carousel-control-next" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
         </a>
         <button class="inventory_button" onclick="goToInventory()">인벤토리</button>
@@ -172,7 +172,7 @@
         }
 
         function clickChess() {
-            window.location.href = "chess.html";
+            window.location.href = "/lightChess.do";
         } // 링크이동만들기
 
         function getMessaggeSkel() {
@@ -204,7 +204,7 @@
         }
 
         function goToInventory() {
-            window.location.href = "../integ/Inventory_temp.html";
+            window.location.href = "/inventory.do";
         } // 링크이동만들기
     </script>
 </body>

@@ -131,11 +131,11 @@
             <img src="/static/images/rozer/integ/square1.png" class="square_R" onclick="Story()">
             <img src="/static/images/rozer/integ/comment_area_bloody2.png" class="comment_area" onclick="redirectToNaver()">
         </div>
-        <a href="Part_2_R.html" class="carousel-control-prev" data-bs-slide="prev">
+        <a href="/lightToRight.do" class="carousel-control-prev" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </a>
 <%--        링크만들기--%>
-        <a href="Part_2_L.html" class="carousel-control-next" data-bs-slide="next">
+        <a href="/lightToLeft.do" class="carousel-control-next" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
         </a>
         <button class="inventory_button" onclick="goToInventory()">인벤토리</button>
@@ -174,7 +174,7 @@
 
         function badskullending(){
             // 이거랑 상응하는 엔딩 씬 하나 더 만들어야 함
-            window.location.href = "Part_2_B_L_jail_ending.html" // 링크만들기
+            window.location.href = "/lightToJail.do" // 링크만들기
         }
 
         function Story(){
@@ -186,7 +186,7 @@
         }
 
         function goToInventory() {
-            window.location.href = "../integ/Inventory_temp.html"; // 링크만들기
+            window.location.href = "/inventory.do"; // 링크만들기
         }
     </script>
 </body>

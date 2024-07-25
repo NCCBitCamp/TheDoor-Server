@@ -86,7 +86,7 @@
                 <img src="/static/images/rozer/integ/comment_area_bloody2.png" class="comment_area">
             </div>
 <%--            링크이동만들기--%>
-            <a href="Part_2_C_UNLOCK.html" class="carousel-control-next" data-bs-slide="next">
+            <a href="/toCenterUNLOCK.do" class="carousel-control-next" data-bs-slide="next">
                 <span class="carousel-control-next-icon"></span>
             </a>
             <button class="inventory_button" onclick="goToInventory()">인벤토리</button>
@@ -131,7 +131,7 @@
         }
 
         function goToInventory() {
-            window.location.href = "../integ/Inventory_temp.html";
+            window.location.href = "/inventory.do";
         }// 링크이동만들기
     </script>
 </body>

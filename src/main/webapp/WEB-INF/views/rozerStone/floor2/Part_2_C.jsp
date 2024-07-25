@@ -180,11 +180,11 @@
             <img src="/static/images/rozer/integ/comment_area_bloody.png" class="comment_area" onclick="redirectToNaver()">
             <!-- <img src="comment_area_bloody2.png" class="comment_area" onclick="redirectToNaver()"> -->
         </div>
-        <a href="Part_2_L.html" class="carousel-control-prev" data-bs-slide="prev">
+        <a href="/lightToLeft.do" class="carousel-control-prev" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </a>
 <%--        링크이동만들기--%>
-        <a href="Part_2_R.html" class="carousel-control-next" data-bs-slide="next">
+        <a href="/lightToRight.do" class="carousel-control-next" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
         </a>
         <button class="inventory_button" onclick="goToInventory()">인벤토리</button>
@@ -222,7 +222,7 @@
 
             // Check if '검정킹.png' exists in the inventory
             // 확인하기 검정킹*******************************************잘되나*************************
-            const index = inventory.indexOf('검정킹.png');
+            const index = inventory.indexOf('/static/images/rozer/integ/검정킹.png');
             if (index !== -1) {
                 inventory.splice(index, 1); // Remove '검정킹.png' from the inventory
                 localStorage.setItem('inventory', JSON.stringify(inventory)); // Update inventory in localStorage
@@ -242,7 +242,7 @@
             lever.style.transition = 'transform 2s ease';
             
             if(enjoytorture == 1){
-                window.location.href = "Part_2_blindC.html";
+                window.location.href = "/blindCenter.do";
             } // 링크이동만들기
             else{
                 alert('고문대가 움직입니다');
@@ -279,7 +279,7 @@
             nextButton.style.display = 'none';
 
             const prevIcon = document.querySelector('.carousel-control-prev-icon');
-            prevIcon.parentElement.href = 'Part_2_L_UNLOCK_0.html';
+            prevIcon.parentElement.href = '/toLeftUNLOCK0.do';
         } // 링크이동만들기
 
         var enjoytorture = 0;
@@ -300,7 +300,7 @@
         }
 
         function goToInventory() {
-            window.location.href = "../integ/Inventory_temp.html";
+            window.location.href = "/inventory.do";
         }// 링크이동만들기
     </script>
 </body>

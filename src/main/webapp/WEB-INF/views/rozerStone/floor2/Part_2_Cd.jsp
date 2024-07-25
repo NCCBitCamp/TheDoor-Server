@@ -120,7 +120,7 @@
         }
 
         function goToInventory() {
-            window.location.href = "../integ/Inventory_temp.html";
+            window.location.href = "/inventory.do";
         }// 링크이동만들기
     </script>
 </body>

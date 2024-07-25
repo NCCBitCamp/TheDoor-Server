@@ -119,11 +119,11 @@
         function getLight(imageSrc) {
             const audio = new Audio('/static/sounds/rozer/integ/성냥2.mp3');
             audio.play();
-            window.location.href = "Part_2-Script2.html";
+            window.location.href = "/darkToScript2.do";
         }
         // 링크이동만들기
         function goToInventory() {
-            window.location.href = "../integ/Inventory_temp.html";
+            window.location.href = "/inventory.do";
         }
     </script>
 </body>

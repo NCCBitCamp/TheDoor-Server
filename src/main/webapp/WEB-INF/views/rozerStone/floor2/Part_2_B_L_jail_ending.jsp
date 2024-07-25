@@ -122,7 +122,7 @@
                         setTimeout(() => {
                             text.innerHTML = "당신이 여기 있었던.....사람...인가요....?";
                             setTimeout(() => {
-                                window.location.href = "Part_2_B_L_jail_ending_2.html"; // 링크만들기
+                                window.location.href = "/lightToJail2.do"; // 링크만들기
                             }, 5000);
                         }, 2000);
                     }

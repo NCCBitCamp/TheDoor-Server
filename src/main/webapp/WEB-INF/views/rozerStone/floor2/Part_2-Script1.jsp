@@ -68,7 +68,7 @@
         setInterval(typing, 100);
 
         function redirectTo2_C() {
-            window.location.href = "Part_2_Cd.html"; // 링크이동만들기
+            window.location.href = "/darkToCenter.do"; // 링크이동만들기
         }
     </script>
 </body>

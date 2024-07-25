@@ -83,7 +83,7 @@
 
                 // 클릭 이벤트 종료 후 0.5초 후에 페이지 이동
                 setTimeout(function() {
-                    window.location.href = 'Part_2_R.html'; // 링크이동만들기
+                    window.location.href = '/lightToRight.do'; // 링크이동만들기
                     }, 500)
             }
         }

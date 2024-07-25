@@ -203,7 +203,7 @@
             const code = document.getElementById('codeInput').value;
             if (code.toLowerCase() === 'king') {
                 //링크이동만들기
-                window.location.href = "Part_2_blindL_UNLOCK.html";
+                window.location.href = "/toLeftUNLOCK";
             } else {
                 modal.style.display = "none";
                 showGhost();
@@ -221,7 +221,7 @@
         }
 
         function goToInventory() { // 링크이동만들기
-            window.location.href = "../integ/Inventory_temp.html";
+            window.location.href = "/inventory.do";
         }
     </script>
 </body>

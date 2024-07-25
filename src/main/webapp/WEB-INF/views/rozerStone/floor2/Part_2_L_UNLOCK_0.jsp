@@ -180,7 +180,7 @@
         function checkCode() {
             const code = document.getElementById('codeInput').value;
             if (code.toLowerCase() === 'king') {
-                window.location.href = "Part_2_L_UNLOCK.html";
+                window.location.href = "/toLeftUNLOCK.do";
             } else { // 링크이동만드릭
                 modal.style.display = "none";
                 showGhost();
@@ -198,7 +198,7 @@
         }
 
         function goToInventory() {
-            window.location.href = "../integ/Inventory_temp.html";
+            window.location.href = "/inventory.do";
         } // 링크이동만들기
     </script>
 </body>

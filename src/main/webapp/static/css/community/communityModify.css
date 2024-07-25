@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+main h4 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+form .form-group label {
+    font-weight: bold;
+}
+
+#fileInstructions {
+    font-size: 0.9rem;
+}
+
+#filePreview {
+    border: 1px dashed #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 100px;
+}
+
+.btn {
+    margin: 20px;
+}
+
+.btn-container {
+    text-align: center;
+}

@@ -1,0 +1,78 @@
+#extendHeaderImg {
+    width: 100%;
+    height: 30vh;
+    padding: 0;
+}
+.logo_head_between_area {
+    width: 100%; /* 이미지의 너비를 100%로 설정 */
+    height: auto; /* 이미지의 높이를 자동으로 설정하여 비율을 유지 */
+}
+.head_area {
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    background-color: white;
+    width: 100%;
+    height: 15vh;
+    font-size: xx-large;
+    font-weight: bolder;
+    margin-top: 10vh; /* 로고 영역과 겹치지 않도록 마진 추가 */
+}
+.title_area{
+    margin-top: 3%;
+    color: white;
+    font-weight: bolder;
+    font-size: xx-large;
+    text-align: center;
+    animation: slideIn 2.5s ease-out;
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.content {
+    display: grid;
+    place-items: center;
+    background-color: black;
+    height: 100vh; /* 화면 전체 높이를 차지하도록 설정 */
+}
+
+.image_button{
+    float: left;
+    margin: 80px;
+    margin-bottom: 30%;
+    transition: transform 0.3s ease; /* 이미지 확대 전환을 부드럽게 함 */
+    z-index: 7;
+}
+.image_button:hover{
+    transform: scale(1.3); /* 이미지 확대 비율 */
+}
+ .semi_title{
+    opacity: 0;
+    color: white;
+    text-align: center;
+    font-size: large;
+    margin-bottom: 5%;
+    margin-top: -15%;
+}
+
+.fade-in {
+    animation: fadeIn 3s forwards; 
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+.semi_title:hover {
+    transform: scale(1.1); 
+}

@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+.navbar {
+    /* Your existing navbar styles */
+}
+#extendHeaderImg {
+    width: 100%;
+    height: 30vh;
+    padding: 0;
+}
+.logo_head_between_area {
+    width: 100%;
+    height: auto;
+}
+.head_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    width: 100%;
+    height: 10vh;
+    font-size: xx-large;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+.head_area_title {
+    margin-top: 0;
+}
+.title_area {
+    margin-top: 3%;
+    color: white;
+    font-weight: bolder;
+    font-size: xx-large;
+    text-align: center;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+.form-container {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+    margin: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input, .form-group textarea, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #666;
+    font-size: large;
+    box-sizing: border-box;
+    background-color: #444;
+    color: white;
+}
+.form-group textarea {
+    height: 300px;
+}
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.form-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    font-size: large;
+}
+.footer {
+    background-color: white;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+.footer-content a {
+    color: white;
+    text-decoration: none;
+}

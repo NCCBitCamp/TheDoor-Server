@@ -1,0 +1,113 @@
+.content {
+    flex-direction: column;
+    align-items: center;
+    margin: 0%;
+    text-align: center;
+    width: 100%;
+}
+
+#extendHeaderImg {
+    width: 100%;
+    height: 30vh;
+    padding: 0;
+}
+
+#profileArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30vh;
+    margin-bottom: 4vh;
+}
+
+.profileImg, .profileAlertImg {
+    height: 50%;
+    margin-top: 5vh;
+    margin-bottom: 1vh;
+}
+
+#selectArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#selectArea ul {
+    list-style: none;
+    margin: 2vh 5vw;
+    height: 5vh;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#selectArea li {
+    list-style: none;
+    margin: 0 6vw 6vh;
+    font-size: 25px;
+}
+#selectArea li a {
+    text-decoration: none black;
+}
+#selectArea li a:link {
+    color: black;
+}
+#selectArea li a:visited {
+    color: black;
+}
+#selectArea li a:hover {
+    font-weight: bold;
+}
+
+#selectArea #userInfo {
+    display: flex;
+    margin: 3vh 0;
+    width: 100%;
+    float: left;
+    justify-content: space-between;
+}
+
+#selectArea #userInfo .old {
+    margin: 2vh 0 0vh 14vw;
+    padding: 5%;
+    padding-top: 0;
+    float: left;
+    width: 50%;
+    border-right: 1px solid grey;
+    text-align: left;
+}
+
+#selectArea #userInfo .new {
+    margin: 2vh 14vw 0vh 0;
+    padding: 5%;
+    padding-top: 0;
+    padding-bottom: 0;
+    float: left;
+    width: 50%;
+    text-align: left;
+}
+#selectArea #userInfo .old div, #selectArea #userInfo .new div{
+    height: 10vh;
+}
+
+
+.fixedUserInfo {
+    border: 2px solid black;
+    border-radius: 5%;
+    width: 20vw;
+    height: 3vh;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.new input{
+    border-radius: 5%;
+    width: 20vw;
+    height: 3vh;    
+}
+
+.emphaFont{
+    font-size: x-large;
+    font-weight: bold;
+}

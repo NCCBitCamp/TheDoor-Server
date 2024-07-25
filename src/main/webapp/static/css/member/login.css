@@ -1,0 +1,131 @@
+.content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url(/Main/assets/images/loginBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    width: 193px;
+    height: 76px;
+    margin-bottom: 2rem;
+    margin-top: 0px;
+    position: relative;
+    font-size: 4rem;
+    color: #F9F3F3;
+    text-shadow: -1px 2px black, -2px 2px black, 0px 2px black, 0px -1px black;
+}
+
+#loginBox {
+    position: relative;
+    width: 21rem;
+    height: 21rem;
+    background-color: #424141;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 4px 0px;
+    
+}
+
+.inputBox {
+  flex-direction: column ; /* 세로 정렬 */
+  display : flex;
+  outline: none;
+  color: #F9F3F3;
+  
+}
+
+
+[type] {
+    color: #F9F3F3;
+    /* outline: 1px solid rgb(54, 54, 54); */
+    outline: none;
+}
+
+#idLabel {
+    font-size: 1.2ch;
+    padding-bottom: 1ch;
+    text-align: left;
+}
+#pwLabel {
+    font-size: 1.1ch;
+    padding-bottom: 1ch;
+    text-align: left;
+}
+
+.id {
+    width: 278px;
+    height: 56px;
+    background-color: #272727;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border: 0px;
+}
+.password {
+    width: 278px;
+    height: 56px;
+    background-color: #272727;
+    border-radius: 10px;
+    border: 0px;
+    margin-bottom: 0.5rem;
+}
+
+#pwBtn {
+    width: 25px;
+    height: 18px;
+    position: absolute;
+    right: 2.5rem;
+    top: 10.5rem;
+    background-image: url(/Main/assets/images/흰자포함눈.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+
+#pwFind {
+    text-align: right;
+    margin-bottom: 2rem;
+    font-size: 1.2ch;
+    text-decoration : underline;
+    cursor: pointer
+}
+
+.loginbtn {
+    text-align: center;
+    width: 278px;
+    height: 30px;
+    background-color: #FBC70E;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border: 0px;
+    color: #000;
+    font-weight: bold;
+}
+
+.createBtn {
+    text-align: center;
+    width: 21rem;
+    height: 45px;
+    background-color: #424141;
+    border-radius: 20px;
+    border: 0px;
+    text-decoration : underline;
+    box-shadow: 0.5px 3.5px 3px 0.5px black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.createAccBox{
+    padding-top: 1rem;
+}

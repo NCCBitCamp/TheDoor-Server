@@ -1,0 +1,158 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+.navbar {
+    /* Your existing navbar styles */
+}
+#extendHeaderImg {
+    width: 100%;
+    height: 30vh;
+    padding: 0;
+}
+.logo_head_between_area {
+    width: 100%; /* 이미지의 너비를 100%로 설정 */
+    height: auto; /* 이미지의 높이를 자동으로 설정하여 비율을 유지 */
+}
+.head_area {
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    background-color: transparent;
+    width: 100%;
+    height: 4vh;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+.head_area_title {
+    margin-top: 33vh;
+}
+.title_area {
+    margin-top: 3%;
+    color: white;
+    font-weight: bolder;
+    font-size: xx-large;
+    text-align: center;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    flex: 1; /* flex-grow로 content가 남은 공간을 채우도록 설정 */
+    padding: 20px;
+    box-sizing: border-box; /* 패딩을 포함하여 크기를 계산 */
+    flex-direction: column; /* Flexbox로 수직 배치 */
+}
+.search_area {
+    display: flex;
+    justify-content: right;
+    margin: 20px 0;
+    margin-top: 6%;
+}
+.search_area select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #666666;
+    font-size: large;
+    margin-right: 10px;
+}
+.search_area input {
+    width: 20%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #666666;
+    font-size: large;
+    margin-right: 10px;
+}
+.search_button {
+    width: 3%;
+    margin-right: 15px;
+    font-weight: bold;
+}
+.board {
+    width: 100%;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    box-sizing: border-box; /* 패딩을 포함하여 크기를 계산 */
+}
+.board h2 {
+    text-align: center;
+}
+.posts {
+    list-style-type: none;
+    padding: 0;
+}
+.posts li {
+    background-color: #444;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.posts h3 {
+    margin: 0;
+}
+.post-info {
+    margin-right: 20px;
+}
+.post-date {
+    color: #bbb;
+}
+.post-buttons {
+    display: flex;
+    margin-top: 10px;
+}
+.post-buttons button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.pagination a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+.pagination a:hover {
+    background-color: #666;
+}
+.write-post-button {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+    width: 100%;
+}
+.write-post-button button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+}
+.footer {
+    background-color: white;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+.footer-content a {
+    color: white;
+    text-decoration: none;
+}

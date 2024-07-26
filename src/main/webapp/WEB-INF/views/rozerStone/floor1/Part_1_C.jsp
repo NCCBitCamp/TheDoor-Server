@@ -112,14 +112,14 @@
             <span class="text"></span>
         </div>
         <div>
-            <img src="/static/images/rozer/floor1/Part_1_Center.png" class="middle bgimg">
-            <img src="/static/images/rozer/floor1/종이1.png" class="middle paper1" onclick="getPaper1()">
-            <img src="/static/images/rozer/floor1/종이10.png" class="middle paper10" onclick="getPaper2()">
-            <img src="/static/images/rozer/floor1/양초.png" class="middle candle" onclick="getcandle()">
-            <img src="/static/images/rozer/floor1/책상위맨위책.png" class="middle book1" onclick="getBook1()">
-            <img src="/static/images/rozer/floor1/책상위책2.png" class="middle book23" onclick="getBook2()">
-            <img src="/static/images/rozer/floor1/책상위책3.png" class="middle book23 book3" onclick="getBook3()">
-            <img src="/static/images/rozer/floor1/comment_area_bloody.png" class="comment_area">
+            <img src="/static/images/rozer/integ/Part_1_Center.png" class="middle bgimg">
+            <img src="/static/images/rozer/integ/종이1.png" class="middle paper1" onclick="getPaper1()">
+            <img src="/static/images/rozer/integ/종이10.png" class="middle paper10" onclick="getPaper2()">
+            <img src="/static/images/rozer/integ/양초.png" class="middle candle" onclick="getcandle()">
+            <img src="/static/images/rozer/integ/책상위맨위책.png" class="middle book1" onclick="getBook1()">
+            <img src="/static/images/rozer/integ/책상위책2.png" class="middle book23" onclick="getBook2()">
+            <img src="/static/images/rozer/integ/책상위책3.png" class="middle book23 book3" onclick="getBook3()">
+            <img src="/static/images/rozer/integ/comment_area_bloody.png" class="comment_area">
         </div>
         <!--링크 이동 수정-->
         <a href="/part1CToPart1L.do" class="carousel-control-prev" data-bs-slide="prev">

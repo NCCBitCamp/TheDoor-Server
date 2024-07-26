@@ -190,7 +190,7 @@
             } else {
                 const audio = new Audio('/static/sounds/rozer/integ/돌밀기1.mp3');
                 audio.play();
-                window.location.href = "../floor3/Part_3_Pre.html";
+                window.location.href = "/blindP3Pre.do";
             } // 링크이동만들기
         }
 
@@ -200,7 +200,7 @@
 
             setTimeout(() => {
                 if (!isSolvemaze) {
-                    window.location.href = "../floor1/Dead_In_Dark.html";
+                    window.location.href = "/ToDD.do";
                 } // 링크이동만들기
             }, 10000); // 10초 후 실행
         }

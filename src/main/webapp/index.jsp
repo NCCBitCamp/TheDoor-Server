@@ -78,9 +78,9 @@
 </div>
 <script>
     function saveUsername() {
-        var userId = document.getElementById('user_id').value;
-        localStorage.setItem('username', userId);
-        console.log("Username saved to localStorage: " + userId);
+        var username = document.getElementById('user_id').value;
+        localStorage.setItem('username', username);
+        console.log(username);
     }
 </script>
 </body>

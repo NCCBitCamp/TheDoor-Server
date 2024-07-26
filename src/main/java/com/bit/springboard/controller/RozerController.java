@@ -28,49 +28,49 @@ public class RozerController {
 
     @RequestMapping("/nar2ToPart112.do")
     public String nar2ToPart112(){
-        return "/rozerStone/floor1/Part1_1_2";
+        return "/rozerStone/floor1/Part_1_1_2";
     }
 
     // Part_1_1_2 -> Part_1_3
 
     @RequestMapping("/part112ToPart13.do")
     public String part112ToPart13(){
-        return "/rozerStone/floor1/Part1_3";
+        return "/rozerStone/floor1/Part_1_3";
     }
 
     // Part_1_3 -> Part_1_4
 
     @RequestMapping("/part13ToPart14.do")
     public String part13ToPart14(){
-        return "/rozerStone/floor1/Part1_4";
+        return "/rozerStone/floor1/Part_1_4";
     }
 
     // Part_1_4 -> Part_1_5
 
     @RequestMapping("/part14ToPart15.do")
     public String part14ToPart15(){
-        return "/rozerStone/floor1/Part1_5";
+        return "/rozerStone/floor1/Part_1_5";
     }
 
     // Part_1_5 -> Part_1_6
 
     @RequestMapping("/part15ToPart16.do")
     public String part15ToPart16(){
-        return "/rozerStone/floor1/Part1_6";
+        return "/rozerStone/floor1/Part_1_6";
     }
 
     // Part_1_6 -> Part_1_7
 
     @RequestMapping("/part16ToPart17.do")
     public String part16ToPart17(){
-        return "/rozerStone/floor1/Part1_7";
+        return "/rozerStone/floor1/Part_1_7";
     }
 
     // Part_1_7 -> Part_1_C
 
     @RequestMapping("/part17ToPart1C.do")
     public String part17ToPart1C(){
-        return "/rozerStone/floor1/Part1_C";
+        return "/rozerStone/floor1/Part_1_C";
     }
 
 
@@ -79,22 +79,22 @@ public class RozerController {
 
     @RequestMapping("/part1CToPart1L.do")
     public String part1CToPart1L(){
-        return "/rozerStone/floor1/Part1_L";
+        return "/rozerStone/floor1/Part_1_L";
     }
 
     @RequestMapping("/part1CToPart1R.do")
     public String part1CToPart1R(){
-        return "/rozerStone/floor1/Part1_R";
+        return "/rozerStone/floor1/Part_1_R";
     }
 
     @RequestMapping("/part1LToPart1C.do")
     public String part1LToPart1C(){
-        return "/rozerStone/floor1/Part1_C";
+        return "/rozerStone/floor1/Part_1_C";
     }
 
     @RequestMapping("/part1RToPart1C.do")
     public String part1RToPart1C(){
-        return "/rozerStone/floor1/Part1_C";
+        return "/rozerStone/floor1/Part_1_C";
     }
 
     // Part_1_R ->  Part_2-Script1

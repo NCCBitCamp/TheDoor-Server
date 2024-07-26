@@ -58,7 +58,7 @@
 
         function redirectToCenter() {
             // 링크 이동 수정
-            window.location.href = "part14ToPart15.jsp";
+            window.location.href = "/part14ToPart15.do";
         }
     </script>
 </body>

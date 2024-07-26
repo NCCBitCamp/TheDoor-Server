@@ -131,7 +131,7 @@
         }).setInteractive();
 
         mainButton.on('pointerdown', () => {
-            window.location.href = '${pageContext.request.contextPath}/index.jsp';
+            window.location.href = '${pageContext.request.contextPath}/main/mainDoor.do';
         });
 
         leftButton.on('pointerdown', () => {

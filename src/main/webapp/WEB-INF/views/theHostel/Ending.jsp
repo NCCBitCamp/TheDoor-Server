@@ -109,6 +109,7 @@
             },
             success: function(data) {
                 console.log(data);
+                resetElapsedTime();
             },
             error: function(jqXHR, textStatus, errorThrown) {
                 console.error('AJAX Error:', textStatus);

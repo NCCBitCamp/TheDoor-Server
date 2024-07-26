@@ -15,6 +15,9 @@ public class MainController {
     @Autowired
     private RankService rankService;
 
+    @RequestMapping("mainDoor.do")
+    public String mainView() { return "/main/mainDoor"; }
+
     @RequestMapping("502Door.do")
     public String bitView() {
         return "/main/502Door";

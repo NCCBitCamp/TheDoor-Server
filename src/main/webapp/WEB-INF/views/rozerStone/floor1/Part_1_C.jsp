@@ -15,7 +15,7 @@
             align-items: flex-end;
             height: 100vh; /* 화면 전체 높이로 설정 */
             margin: 0;
-            background-image: url("/static/images/rozer/floor1/floor1_bg_dark.png");
+            background-image: url("/static/images/rozer/integ/floor1_bg_dark.png");
             background-size: cover; /* 이미지를 화면에 꽉 차게 설정 */
             background-position: center; /* 이미지를 화면 중앙에 위치 */
             background-repeat: no-repeat; /* 이미지를 반복하지 않게 설정 */
@@ -122,11 +122,11 @@
             <img src="/static/images/rozer/floor1/comment_area_bloody.png" class="comment_area">
         </div>
         <!--링크 이동 수정-->
-        <a href="Part_1_L.jsp" class="carousel-control-prev" data-bs-slide="prev">
+        <a href="/part1CToPart1L.do" class="carousel-control-prev" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </a>
         <!--링크 이동 수정-->
-        <a href="Part_1_R.jsp" class="carousel-control-next" data-bs-slide="next">
+        <a href="/part1CToPart1R.do" class="carousel-control-next" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
         </a>
         <button class="inventory_button" onclick="goToInventory()">인벤토리</button>
@@ -147,7 +147,7 @@
 
         function redirectToNaver() {
             <!--링크 이동 수정-->
-            window.location.href = "Part_1_R.jsp";
+            window.location.href = "/part1CToPart1R.do";
         }
         
         function getItem(imageSrc) {
@@ -274,7 +274,7 @@
 
         function goToInventory() {
             // 링크 이동 수정
-            window.location.href = "Inventory_temp.jsp";
+            window.location.href = "/inventory.do";
         }
     </script>
 </body>

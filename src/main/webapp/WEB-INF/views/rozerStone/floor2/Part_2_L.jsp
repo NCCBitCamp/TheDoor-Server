@@ -276,7 +276,7 @@
         }
 
         function insect(){
-            window.location.href = "Dead_In_Insect.html";
+            window.location.href = "/ToDII.do";
         }//링크이동만들기
 
         let isbonesPlayed = false;

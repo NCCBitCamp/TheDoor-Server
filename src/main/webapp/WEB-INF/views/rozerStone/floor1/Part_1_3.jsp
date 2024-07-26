@@ -57,7 +57,7 @@
 
         function redirectTo1_4() {
             // 링크 이동 수정
-            window.location.href = "Part_1_4.jsp";
+            window.location.href = "/part13ToPart14.do";
         }
     </script>
 </body>

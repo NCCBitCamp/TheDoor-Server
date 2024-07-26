@@ -9,11 +9,137 @@ public class RozerController {
 
 
 //**********************************************  1층  *********************************************************
-//    공통부분 (인벤?)
+    // Nar_1 -> Nar_2
+
+    @RequestMapping("/nar1ToNar2.do")
+    public String nar1ToNar2(){
+        return "rozerStone/floor1/Nar_2";
+    }
+
+    // Nar_2 -> Part_1_1_2
+
+    @RequestMapping("/nar2ToPart112.do")
+    public String nar2ToPart112(){
+        return "rozerStone/floor1/Part1_1_2";
+    }
+
+    // Part_1_1_2 -> Part_1_3
+
+    @RequestMapping("/part112ToPart13.do")
+    public String part112ToPart13(){
+        return "rozerStone/floor1/Part1_3";
+    }
+
+    // Part_1_3 -> Part_1_4
+
+    @RequestMapping("/part13ToPart14.do")
+    public String part13ToPart14(){
+        return "rozerStone/floor1/Part1_4";
+    }
+
+    // Part_1_4 -> Part_1_5
+
+    @RequestMapping("/part14ToPart15.do")
+    public String part14ToPart15(){
+        return "rozerStone/floor1/Part1_5";
+    }
+
+    // Part_1_5 -> Part_1_6
+
+    @RequestMapping("/part15ToPart16.do")
+    public String part15ToPart16(){
+        return "rozerStone/floor1/Part1_6";
+    }
+
+    // Part_1_6 -> Part_1_7
+
+    @RequestMapping("/part16ToPart17.do")
+    public String part16ToPart17(){
+        return "rozerStone/floor1/Part1_7";
+    }
+
+    // Part_1_7 -> Part_1_C
+
+    @RequestMapping("/part17ToPart1C.do")
+    public String part17ToPart1C(){
+        return "rozerStone/floor1/Part1_C";
+    }
+
+
+
+    // Part_1_C <-> Part_1_L <-> Part_1_R
+
+    @RequestMapping("/part1CToPart1L.do")
+    public String part1CToPart1L(){
+        return "rozerStone/floor1/Part1_L";
+    }
+
+    @RequestMapping("/part1CToPart1R.do")
+    public String part1CToPart1R(){
+        return "rozerStone/floor1/Part1_R";
+    }
+
+    @RequestMapping("/part1LToPart1C.do")
+    public String part1LToPart1C(){
+        return "rozerStone/floor1/Part1_C";
+    }
+
+    @RequestMapping("/part1RToPart1C.do")
+    public String part1RToPart1C(){
+        return "rozerStone/floor1/Part1_C";
+    }
+
+    // Part_1_R ->  Part_2-Script1
+
+    @RequestMapping("/part1RToPart2S1.do")
+    public String part1RToPart2S(){
+        return "rozerStone/floor2/Part_2-Script1";
+    }
+
+
+//********************공통부분 (인벤?) / 죽는 화면으로 넘어가는 거?***************************
+
+    //          -> DeadDark1,2
+
+    @RequestMapping("/ToDD.do")
+    public String ToDD(){
+        return "rozerStone/integ/Dead_In_Dark";
+    }
+
+    @RequestMapping("/ToDD2.do")
+    public String ToDD2(){
+        return "rozerStone/integ/Dead_In_Dark2";
+    }
+
+
+    //          -> Dead_stampede
+
+    @RequestMapping("/ToDS.do")
+    public String ToDS(){
+        return "rozerStone/integ/Dead_stampede";
+    }
+
+    //          -> Dead_In_bones
+
+    @RequestMapping("/ToDB.do")
+    public String ToDB(){
+        return "rozerStone/integ/Dead_In_bones";
+    }
+
+    @RequestMapping("/ToDII.do")
+    public String ToDII(){
+        return "rozerStone/integ/Dead_In_Insect";
+    }
+
+
+    // 인벤토리로 가는~
+
     @RequestMapping("/inventory.do")
     public String inventory(){
         return "rozerStone/integ/Inventory_temp";
     }
+
+
 //**********************************************  2층  *********************************************************
 
     // 2_Cd 부터 시작 : Ld<-->Rd
@@ -73,6 +199,10 @@ public class RozerController {
     @RequestMapping("/blindLeft.do")
     public String blindLeft2(){
         return "rozerStone/floor2/Part_2_Ld";
+    }
+    @RequestMapping("/blindP3Pre.do")
+    public String blindP3Pre(){
+        return "rozerStone/floor2/Part_3_Pre";
     }
     
 //**************************    언록화면    **************************

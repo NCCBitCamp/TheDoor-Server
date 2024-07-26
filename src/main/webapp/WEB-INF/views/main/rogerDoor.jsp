@@ -149,7 +149,7 @@
         zoneRoger.on('pointerdown', () => {
             game.scene.scenes[0].sound.play('rozerDoorOpen');
             game.scene.scenes[0].time.delayedCall(1500, () => {
-                window.location.href = '../Rozer_stone/floor1/Nar_1.html';
+                window.location.href = '${pageContext.request.contextPath}/rozerStone/floor1/Nar_1.do';
             });
         });
         zoneRoger.on('pointerover', () => {

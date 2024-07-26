@@ -4,14 +4,21 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/rozerStone")
 public class RozerController {
 
 
 
 //**********************************************  1층  *********************************************************
+    // Nar_1 <- 이런 식으로 지정해주셔야....됩니다
+    @RequestMapping("/floor1/Nar_1.do")
+    public String Nar_1(){
+        return "/rozerStone/floor1/Nar_1";
+    }
+
     // Nar_1 -> Nar_2
 
-    @RequestMapping("/nar1ToNar2.do")
+    @RequestMapping("nar1ToNar2.do")
     public String nar1ToNar2(){
         return "rozerStone/floor1/Nar_2";
     }

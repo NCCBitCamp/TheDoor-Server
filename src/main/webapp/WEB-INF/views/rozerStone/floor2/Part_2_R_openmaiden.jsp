@@ -184,7 +184,7 @@
             const die = confirm("체험 해 볼까?");
             
             if(die){
-                window.location.href = "../integ/Dead_stampede.html";
+                window.location.href = "/ToDS.do";
             }
             alert("아니다..그러지말자..");
         } // 링크이동만들기

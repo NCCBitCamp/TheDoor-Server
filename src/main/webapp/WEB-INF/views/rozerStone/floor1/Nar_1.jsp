@@ -72,7 +72,7 @@
                 playAudio(content[index].audio); // 오디오 재생
                 typing(); // 다음 대사 타이핑 시작
             } else {
-                location.href = 'Nar_2.html'; // 마지막 대사 이후 페이지 이동
+                location.href = '/nar1ToNar2.do'; // 마지막 대사 이후 페이지 이동
             }
         }
 

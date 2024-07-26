@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/bitCamp")
 public class BitController {
+
     @RequestMapping("502Room.do")
     public String bit502roomView() {
         return "/bitCamp/502Room";

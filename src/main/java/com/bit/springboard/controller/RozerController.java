@@ -10,8 +10,8 @@ public class RozerController {
 
 //**********************************************  1층  *********************************************************
 
-    // Nar_1 <- 이런 식으로 지정해주셔야....됩니다
-    @RequestMapping("/floor1/Nar_1.do")
+    // Nar_1
+    @RequestMapping("/rozerIntro.do")
     public String Nar_1(){
         return "/rozerStone/floor1/Nar_1";
     }
@@ -186,19 +186,19 @@ public class RozerController {
         return "/rozerStone/floor2/Part_2_L";
     }
 
-//    아이언메이든 오픈
+    //    아이언메이든 오픈
     @RequestMapping("/lightOpenMaiden.do")
     public String lightOpenMaiden2(){
         return "/rozerStone/floor2/Part_2_R_openmaiden";
     }
 
-//    체스화면
+    //    체스화면
     @RequestMapping("/lightChess.do")
     public String lightChess(){
         return "/rozerStone/floor2/chess";
     }
 
-//**************************   블라인드 화면    **************************
+    //**************************   블라인드 화면    **************************
     @RequestMapping("/blindCenter.do")
     public String blindCenter2(){
         return "/rozerStone/floor2/Part_2_Cd";
@@ -211,8 +211,8 @@ public class RozerController {
     public String blindP3Pre(){
         return "/rozerStone/floor2/Part_3_Pre";
     }
-    
-//**************************    언록화면    **************************
+
+    //**************************    언록화면    **************************
     @RequestMapping("/toLeftUNLOCK0.do")
     public String toLeftUnlock0(){
         return "/rozerStone/floor2/Part_2_L_UNLOCK_0";
@@ -236,7 +236,7 @@ public class RozerController {
         return "/rozerStone/floor2/Part_2_B";
     }
 
-//    감옥엔딩
+    //    감옥엔딩
     @RequestMapping("/lightToJail.do")
     public String lightToJail2(){
         return "/rozerStone/floor2/Part_2_B_L_jail_ending";

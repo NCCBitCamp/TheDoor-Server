@@ -110,6 +110,7 @@
             success: function(data) {
                 console.log(data);
                 resetElapsedTime();
+                localStorage.removeItem(bgmCurrentTime);
             },
             error: function(jqXHR, textStatus, errorThrown) {
                 console.error('AJAX Error:', textStatus);

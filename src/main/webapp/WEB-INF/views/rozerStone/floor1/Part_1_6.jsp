@@ -57,7 +57,7 @@
 
         function redirectToNaver() {
             // 링크 이동 수정
-            window.location.href = "Part_1_7.jsp";
+            window.location.href = "/part16ToPart17.do";
         }
     </script>
 </body>

@@ -136,7 +136,7 @@
         // 클릭 이벤트 종료 후 0.5초 후에 페이지 이동
         setTimeout(function() {
             // 링크 이동 수정
-            window.location.href = 'Part_1_C.jsp';
+            window.location.href = '/part17ToPart1C.do';
             }, 500);
         });
 
@@ -145,7 +145,7 @@
         noButton.addEventListener('click', function() {
             modal.style.display = "none"; // 모달 창 닫기
             // 링크 이동 수정
-            window.location.href = 'Dead_In_Dark.jsp'; // '아니오' 선택 시 이동
+            window.location.href = '/ToDD.do'; // '아니오' 선택 시 이동
         });
 
         // 모달 창 외부를 클릭하면 닫기

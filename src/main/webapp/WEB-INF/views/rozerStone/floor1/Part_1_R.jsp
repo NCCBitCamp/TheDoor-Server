@@ -133,7 +133,7 @@
             <img src="/static/images/rozer/integ/comment_area_bloody.png" class="comment_area" onclick="resetMessage()">
         </div>
         <!--링크 이동 수정-->
-        <a href="Part_1_C.html" class="carousel-control-prev" data-bs-slide="prev">
+        <a href="/part1RToPart1C.do" class="carousel-control-prev" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </a>
         <button class="inventory_button" onclick="goToInventory()">인벤토리</button>
@@ -237,7 +237,7 @@
 
         function getMessaggeshelf3() {
             /*링크 이동 수정*/
-            window.location.href = "Dead_stampede.html";
+            window.location.href = "/ToDS.do";
         }
 
         function getMessaggechest() {
@@ -334,7 +334,7 @@
 
                     document.querySelector('.comment_area').onclick = function() {
                         // 링크 이동 수정
-                        window.location.href = "../floor2/Part_2-Script1.html";
+                        window.location.href = "/part1RToPart2S1.do";
                     };
                 }, 2000);
 
@@ -345,7 +345,7 @@
 
         function goToInventory() {
             // 링크 이동 수정
-            window.location.href = "../integ/Inventory_temp.html";
+            window.location.href = "/inventory.do";
         }
 
         function handleShelf3Click() {

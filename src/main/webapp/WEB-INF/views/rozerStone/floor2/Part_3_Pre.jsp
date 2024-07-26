@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RozerStone</title>
     <script src="/static/js/rozer/timer.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="icon" href="../favicon-16x16.png">
     <style>
         body {
@@ -35,13 +36,12 @@
                     rank_id: username,
                     playdate: `\${now.getFullYear()}-\${now.getMonth() + 1 >= 10 ? now.getMonth() + 1 : "0" + (now.getMonth() + 1)}-\${now.getDate() >= 10 ? now.getDate() : "0" + now.getDate()}T\${now.getHours() >= 10 ? now.getHours() : "0" + now.getHours()}:\${now.getMinutes() >= 10 ? now.getMinutes() : "0" + now.getMinutes()}:\${now.getSeconds() >= 10 ? now.getSeconds() : "0" + now.getSeconds()}`,
                     playtime: elapsedTime,
-                    gametype: 'theHostel',
+                    gametype: 'rozerStone',
                     comment: msg
                 },
                 success: function(data) {
                     console.log(data);
                     resetElapsedTime();
-                    localStorage.removeItem(bgmCurrentTime);
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
                     console.error('AJAX Error:', textStatus);

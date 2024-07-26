@@ -66,8 +66,8 @@
 </div>
 
 <script>
-    // console.log("롱메");
     document.addEventListener('DOMContentLoaded', function() {
+
     const config = {
         type: Phaser.AUTO,
         width: 1280,
@@ -410,7 +410,6 @@
                         success: function(data) {
                             console.log(data);
                             resetElapsedTime();
-                            localStorage.removeItem(bgmCurrentTime);
                         },
                         error: function(jqXHR, textStatus, errorThrown) {
                             console.error('AJAX Error:', textStatus);
@@ -420,7 +419,7 @@
                     });
 
                     mainMenuButton.on('pointerdown', () => {
-                        window.location.href = '${pageContext.request.contextPath}/index.jsp';
+                        window.location.href = '${pageContext.request.contextPath}/main/mainDoor.do';
                     });
 
 

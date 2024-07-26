@@ -173,11 +173,11 @@
             <img src="/static/images/rozer/integ/comment_area_bloody.png" class="comment_area" ondblclick="showBlackScreen()">
         </div>
         <!--링크 이동 수정-->
-        <a href="Part_1_L.html" class="carousel-control-prev" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
+<%--        <a href="Part_1_L.html" class="carousel-control-prev" data-bs-slide="prev">--%>
+<%--            <span class="carousel-control-prev-icon"></span>--%>
+<%--        </a>--%>
         <!--링크 이동 수정-->
-        <a href="Part_1_C.html" class="carousel-control-next" data-bs-slide="next">
+        <a href="/part1LToPart1C.do" class="carousel-control-next" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
         </a>
         <button class="inventory_button" onclick="goToInventory()">인벤토리</button>
@@ -274,7 +274,7 @@
     
         function deadByShelf() {
             /*링크 이동 수정*/
-            window.location.href = "Dead_stampede.html";
+            window.location.href = "/ToDS.do";
             const bookshelf = document.querySelector('.bookshelf2');
             const rib = document.querySelector('.rib');
             const bloodBible = document.querySelector('.bloodBible');
@@ -358,7 +358,7 @@
         function handleChoice(choice) {
             if (choice === '들어올려본다') {
                 /*링크 이동 수정*/
-                window.location.href = "Dead_In_bones.html";
+                window.location.href = "/ToDB.do";
             } else if (choice === '깨부숴본다') {
                 const audio = new Audio('/static/sounds/rozer/integ/떨어지는소리2.mp3');
                 audio.play();
@@ -386,7 +386,7 @@
     
         function goToInventory() {
             /*링크 이동 수정*/
-            window.location.href = "../integ/Inventory_temp.html";
+            window.location.href = "/inventory.do";
         }
     
         startTyping();

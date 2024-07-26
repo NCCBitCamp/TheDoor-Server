@@ -247,7 +247,7 @@
             
             if(enjoytorture == 1){
                 alert("자살을 선택했습니다.");
-                window.open('../integ/Dead_In_Dark.html'); // 링크이동만들기
+                window.open('/ToDD.do'); // 링크이동만들기
             }
             else{
                 alert('고문대가 움직입니다');

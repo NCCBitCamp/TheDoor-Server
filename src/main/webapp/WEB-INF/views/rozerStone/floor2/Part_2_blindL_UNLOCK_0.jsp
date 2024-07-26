@@ -203,7 +203,7 @@
             const code = document.getElementById('codeInput').value;
             if (code.toLowerCase() === 'king') {
                 //링크이동만들기
-                window.location.href = "/toLeftUNLOCK";
+                window.location.href = "/toLeftUNLOCK.do";
             } else {
                 modal.style.display = "none";
                 showGhost();

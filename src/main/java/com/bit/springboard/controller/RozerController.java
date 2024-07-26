@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/rozerStone")
 public class RozerController {
 
 
@@ -18,7 +19,7 @@ public class RozerController {
 
     // Nar_1 -> Nar_2
 
-    @RequestMapping("/Nar_1.do")
+    @RequestMapping("/floor1/Nar_2.do")
     public String nar1ToNar2(){
         return "/rozerStone/floor1/Nar_2";
     }

@@ -30,7 +30,7 @@
 </head>
 <body style="background-color: black;">
     <div style="display: flex; justify-content: center; align-items: center; margin-top: 10px; height: 12px;">
-        <button type="button" id="skipButton" name="skipButton" onclick="location.href='Nar_2.jsp'">Skip</button>
+        <button type="button" id="skipButton" name="skipButton" onclick="location.href='${pageContext.request.contextPath}/rozerStone/floor1/Nar_2.do'">Skip</button>
     </div>
     <div class="text_box" data-trigger>
         <span class="text" style="color: brown;"></span>
@@ -73,7 +73,7 @@
                 playAudio(content[index].audio); // 오디오 재생
                 typing(); // 다음 대사 타이핑 시작
             } else {
-                location.href = '/nar1ToNar2.do'; // 마지막 대사 이후 페이지 이동
+                location.href = '${pageContext.request.contextPath}/rozerStone/floor1/Nar_2.do'; // 마지막 대사 이후 페이지 이동
             }
         }
 

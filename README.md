@@ -12,6 +12,9 @@
   <h2>배포 주소</h2>
   <p>http://61.97.191.118:8081/</p>
   <br/>
+  <h2>테스트 계정</h2>
+  <p>ID: testuser01 / PW: !hello123 </p>
+  <br/>
   <h2>팀원</h2>
   <a href="https://github.com/Rurouni98" target="_blank">김병주</a> - 웹 프론트 <br/>
   <a href="https://github.com/dodotlm" target="_blank">마태림</a> - 웹 프론트, 백엔드 <br/>

@@ -128,7 +128,7 @@
         });
 
         rankIcon.on('pointerdown', () => {
-            window.location.href = '/';
+            window.location.href = 'http://175.45.200.187:8280/main/ranking.do';
         });
 
         const zone502 = this.add.zone(586, 232, 117, 244).setOrigin(0).setInteractive();

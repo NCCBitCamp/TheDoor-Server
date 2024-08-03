@@ -1,7 +1,7 @@
 <h1>The Door</h1>
 <div align=center>
   
-[![door](https://github.com/NCCBitCamp/TheDoor-Web/assets/75717432/e6b373f1-00aa-4f80-890c-fde31319050a)](http://61.97.191.118:8090/)
+[![door](https://github.com/NCCBitCamp/TheDoor-Web/assets/75717432/e6b373f1-00aa-4f80-890c-fde31319050a)](http://175.45.200.187:8180/)
 
 </div>
 <div>
